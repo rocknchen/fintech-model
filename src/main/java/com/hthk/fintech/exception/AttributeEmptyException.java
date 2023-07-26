@@ -1,12 +1,12 @@
 package com.hthk.fintech.exception;
 
-public class AttributeMissingException extends AttributeInvalidException {
+public class AttributeEmptyException extends AttributeInvalidException {
 
-    public AttributeMissingException(String message) {
+    public AttributeEmptyException(String message) {
         super(message);
     }
 
-    public AttributeMissingException(
+    public AttributeEmptyException(
             String message,
             Throwable cause
     ) {
