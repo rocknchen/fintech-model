@@ -10,15 +10,15 @@ public class EventTrade implements IEvent {
 
     private EventTypeTradeEnum type;
 
-    private LocalDateTime dateTime;
+    private LocalDateTime time;
 
     public EventTrade() {
     }
 
-    public EventTrade(String domain, EventTypeTradeEnum type, LocalDateTime dateTime) {
+    public EventTrade(String domain, EventTypeTradeEnum type, LocalDateTime time) {
         this.domain = domain;
         this.type = type;
-        this.dateTime = dateTime;
+        this.time = time;
     }
 
     public String getDomain() {
@@ -29,7 +29,7 @@ public class EventTrade implements IEvent {
         return type;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public LocalDateTime getTime() {
+        return time;
     }
 }
