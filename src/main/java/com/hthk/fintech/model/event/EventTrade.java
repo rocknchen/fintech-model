@@ -21,7 +21,7 @@ public class EventTrade implements IEvent {
         this.time = time;
     }
 
-    public EventTrade newInstance(String domain, EventTypeTradeEnum type, LocalDateTime time) {
+    public static EventTrade newInstance(String domain, EventTypeTradeEnum type, LocalDateTime time) {
         return new EventTrade(domain, type, time);
     }
 
