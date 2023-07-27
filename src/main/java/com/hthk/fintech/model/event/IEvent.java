@@ -6,7 +6,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 import java.time.LocalDateTime;
 
-@FieldOrder({"domain", "group", "type", "subType", "time"})
+@FieldOrder({"domain", "time", "group", "type", "subType"})
 public interface IEvent {
 
     @CSVField(header = "Domain")
