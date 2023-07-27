@@ -21,14 +21,16 @@ public class EventTrade implements IEvent {
     public EventTrade() {
     }
 
-    public EventTrade(String domain, EventTypeTradeEnum type, LocalDateTime time) {
+    public EventTrade(String domain, EventGroupEnum group, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
         this.domain = domain;
+        this.group = group;
         this.type = type;
+        this.subType = subType;
         this.time = time;
     }
 
-    public static EventTrade newInstance(String domain, EventTypeTradeEnum type, LocalDateTime time) {
-        return new EventTrade(domain, type, time);
+    public static EventTrade newInstance(String domain, EventGroupEnum group, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
+        return new EventTrade(domain, group, type, subType, time);
     }
 
     public String getDomain() {
