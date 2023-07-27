@@ -2,7 +2,7 @@ package com.hthk.fintech.enumration;
 
 public enum DateTimeFormatEnum {
 
-    YYYYMM("yyyyMM");
+    YYYYMM("yyyyMM"), YYYYMMDD("yyyyMMdd");
 
     String format;
 
