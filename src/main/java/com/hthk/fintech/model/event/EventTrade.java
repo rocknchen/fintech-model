@@ -1,5 +1,7 @@
 package com.hthk.fintech.model.event;
 
+import com.hthk.fintech.enumration.EventGroupEnum;
+import com.hthk.fintech.enumration.EventSubTypeTradeEnum;
 import com.hthk.fintech.enumration.EventTypeTradeEnum;
 
 import java.time.LocalDateTime;
@@ -8,7 +10,11 @@ public class EventTrade implements IEvent {
 
     private String domain;
 
+    private EventGroupEnum group;
+
     private EventTypeTradeEnum type;
+
+    private EventSubTypeTradeEnum subType;
 
     private LocalDateTime time;
 
@@ -29,8 +35,18 @@ public class EventTrade implements IEvent {
         return domain;
     }
 
+    @Override
+    public EventGroupEnum getGroup() {
+        return group;
+    }
+
     public EventTypeTradeEnum getType() {
         return type;
+    }
+
+    @Override
+    public EventSubTypeTradeEnum getSubType() {
+        return subType;
     }
 
     public LocalDateTime getTime() {

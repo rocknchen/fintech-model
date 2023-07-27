@@ -1,6 +1,4 @@
 package com.hthk.fintech.enumration;
 
-public enum EventTypeEnum {
-
-
+public enum EventSubTypeTradeEnum {
 }
