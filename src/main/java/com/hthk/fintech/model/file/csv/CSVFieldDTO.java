@@ -12,16 +12,16 @@ public class CSVFieldDTO {
 
     private Method getMethod;
 
-    private AttributeStringConverter converter;
+    private Class<? extends AttributeStringConverter> converterClz;
 
     public CSVFieldDTO() {
     }
 
-    public CSVFieldDTO(String name, String header, Method getMethod, AttributeStringConverter converter) {
+    public CSVFieldDTO(String name, String header, Method getMethod, Class<? extends AttributeStringConverter> converterClz) {
         this.name = name;
         this.header = header;
         this.getMethod = getMethod;
-        this.converter = converter;
+        this.converterClz = converterClz;
     }
 
     public String getName() {
@@ -48,11 +48,11 @@ public class CSVFieldDTO {
         this.getMethod = getMethod;
     }
 
-    public AttributeStringConverter getConverter() {
-        return converter;
+    public Class<? extends AttributeStringConverter> getConverterClz() {
+        return converterClz;
     }
 
-    public void setConverter(AttributeStringConverter converter) {
-        this.converter = converter;
+    public void setConverterClz(Class<? extends AttributeStringConverter> converterClz) {
+        this.converterClz = converterClz;
     }
 }
