@@ -1,5 +1,6 @@
 package com.hthk.fintech.model.event;
 
+import com.hthk.fintech.converter.impl.AttLocalDateTimeConverter;
 import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.EventGroupEnum;
 import com.hthk.fintech.enumration.FieldOrder;
@@ -21,7 +22,7 @@ public interface IEvent {
     @CSVField(header = "SubType")
     Enum<?> getSubType();
 
-    @CSVField(header = "Time")
+    @CSVField(header = "Time", converter = AttLocalDateTimeConverter.class)
     LocalDateTime getTime();
 
 }
