@@ -14,6 +14,16 @@ public class CSVFieldDTO {
 
     private AttributeStringConverter converter;
 
+    public CSVFieldDTO() {
+    }
+
+    public CSVFieldDTO(String name, String header, Method getMethod, AttributeStringConverter converter) {
+        this.name = name;
+        this.header = header;
+        this.getMethod = getMethod;
+        this.converter = converter;
+    }
+
     public String getName() {
         return name;
     }
