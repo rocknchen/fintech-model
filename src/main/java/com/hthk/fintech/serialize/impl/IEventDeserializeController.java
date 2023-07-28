@@ -91,6 +91,7 @@ public class IEventDeserializeController implements ModelDeserializeController<I
 
     private EventGroupEnum getGroup(String groupName) throws DeserializeException {
         try {
+            System.out.println(groupName);
             return EventGroupEnum.valueOf(groupName);
         } catch (IllegalArgumentException e) {
             throw new DeserializeException(e.getMessage(), e);
