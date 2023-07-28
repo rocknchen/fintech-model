@@ -4,7 +4,9 @@ import com.hthk.fintech.enumration.*;
 import com.hthk.fintech.model.event.basic.AbstractEvent;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
+import static com.hthk.fintech.config.FintechStaticData.DEFAULT_DATE_TIME_FORMAT;
 import static com.hthk.fintech.enumration.EventGroupEnum.MARKET_DATA;
 
 @Event(group = MARKET_DATA)
@@ -26,6 +28,11 @@ public class EventMarketData extends AbstractEvent {
 
     public static EventMarketData newInstance(String domain, EventTypeMarketDataEnum type, EventSubTypeMarketDataEnum subType, LocalDateTime time) {
         return new EventMarketData(domain, type, subType, time);
+    }
+
+    @Override
+    public <R extends IEvent> R newInstance(String domain, String typeStr, String subTypeStr, String timeStr) {
+        return (R) new EventMarketData(domain, EventTypeMarketDataEnum.valueOf(typeStr), EventSubTypeMarketDataEnum.valueOf(subTypeStr), LocalDateTime.parse(timeStr, DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)));
     }
 
     @Override

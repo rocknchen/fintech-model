@@ -12,6 +12,8 @@ public abstract class AbstractEvent implements IEvent {
 
     protected LocalDateTime time;
 
+    public abstract <R extends IEvent> R newInstance(String domain, String typeStr, String subTypeStr, String timeStr);
+
     public final EventGroupEnum getGroup() {
         return this.getClass().getAnnotation(Event.class).group();
     }
