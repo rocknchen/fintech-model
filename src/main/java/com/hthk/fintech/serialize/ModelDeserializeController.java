@@ -1,4 +1,9 @@
 package com.hthk.fintech.serialize;
 
-public interface ModelDeserializeController {
+import java.util.List;
+
+public interface ModelDeserializeController<R> {
+
+    R process(List<String> headerList, List<String> fieldList);
+
 }
