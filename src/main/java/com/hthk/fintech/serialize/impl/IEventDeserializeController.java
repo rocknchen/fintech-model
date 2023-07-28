@@ -32,8 +32,9 @@ public class IEventDeserializeController implements ModelDeserializeController<I
 
         Reflections reflections = new Reflections(new ConfigurationBuilder().forPackages(DEFAULT_PACKAGE));
         Set<Class<? extends IEvent>> eventClzSet = reflections.getSubTypesOf(IEvent.class);
-        System.out.println("eventClzSet:" + eventClzSet);
-        Map<EventGroupEnum, Class<? extends IEvent>> eventClzMap = buildMap(eventClzSet);
+        List<Class<? extends IEvent>> clzList = eventClzSet.stream().collect(Collectors.toList());
+        clzList = filterOutAbstract(clzList);
+        Map<EventGroupEnum, Class<? extends IEvent>> eventClzMap = buildMap(clzList);
 
         Class<? extends IEvent> eventClz = eventClzMap.get(eventGroup);
         Method newInstanceMethod = getInstanceBuildMethod(eventClz);
@@ -43,13 +44,12 @@ public class IEventDeserializeController implements ModelDeserializeController<I
         return eventModel;
     }
 
+    private List<Class<? extends IEvent>> filterOutAbstract(List<Class<? extends IEvent>> clzList) {
+        return clzList.stream().filter(t -> !t.getSimpleName().equals("AbstractEvent")).collect(Collectors.toList());
+    }
+
     /**
      * TODO
-     *
-     * @param newInstanceMethod
-     * @param eventModelTemplate
-     * @param fieldList
-     * @return
      */
     private IEvent buildEventModel(Method newInstanceMethod, Object eventModelTemplate, List<String> fieldList) throws DeserializeException {
         String domain = fieldList.get(0);
@@ -79,9 +79,8 @@ public class IEventDeserializeController implements ModelDeserializeController<I
         }
     }
 
-    private Map<EventGroupEnum, Class<? extends IEvent>> buildMap(Set<Class<? extends IEvent>> eventClzSet) {
+    private Map<EventGroupEnum, Class<? extends IEvent>> buildMap(List<Class<? extends IEvent>> clzList) {
         Map<EventGroupEnum, Class<? extends IEvent>> map = new HashMap<>();
-        List<Class<? extends IEvent>> clzList = eventClzSet.stream().collect(Collectors.toList());
         clzList.forEach(c -> {
             EventGroupEnum group = c.getAnnotation(Event.class).group();
             map.put(group, c);
