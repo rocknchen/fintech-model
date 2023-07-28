@@ -57,6 +57,8 @@ public class IEventDeserializeController implements ModelDeserializeController<I
         String subType = fieldList.get(3);
         String time = fieldList.get(4);
         try {
+            System.out.println(newInstanceMethod);
+            System.out.println(eventModelTemplate);
             return (IEvent) newInstanceMethod.invoke(eventModelTemplate, domain, type, subType, time);
         } catch (Exception e) {
             throw new DeserializeException(e.getMessage(), e);
