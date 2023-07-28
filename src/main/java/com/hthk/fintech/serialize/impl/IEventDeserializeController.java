@@ -28,11 +28,11 @@ public class IEventDeserializeController implements ModelDeserializeController<I
 
         String groupName = fieldList.get(keyHeaderIndex);
 
-        System.out.println(groupName);
         EventGroupEnum eventGroup = getGroup(groupName);
 
         Reflections reflections = new Reflections(new ConfigurationBuilder().forPackages(DEFAULT_PACKAGE));
         Set<Class<? extends IEvent>> eventClzSet = reflections.getSubTypesOf(IEvent.class);
+        System.out.println("eventClzSet:" + eventClzSet);
         Map<EventGroupEnum, Class<? extends IEvent>> eventClzMap = buildMap(eventClzSet);
 
         Class<? extends IEvent> eventClz = eventClzMap.get(eventGroup);
@@ -91,7 +91,6 @@ public class IEventDeserializeController implements ModelDeserializeController<I
 
     private EventGroupEnum getGroup(String groupName) throws DeserializeException {
         try {
-            System.out.println(groupName);
             return EventGroupEnum.valueOf(groupName);
         } catch (IllegalArgumentException e) {
             throw new DeserializeException(e.getMessage(), e);
