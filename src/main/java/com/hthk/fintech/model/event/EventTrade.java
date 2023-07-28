@@ -1,47 +1,36 @@
 package com.hthk.fintech.model.event;
 
-import com.hthk.fintech.enumration.EventGroupEnum;
+import com.hthk.fintech.enumration.Event;
 import com.hthk.fintech.enumration.EventSubTypeTradeEnum;
 import com.hthk.fintech.enumration.EventTypeTradeEnum;
+import com.hthk.fintech.model.event.basic.AbstractEvent;
 
 import java.time.LocalDateTime;
 
-public class EventTrade implements IEvent {
+import static com.hthk.fintech.enumration.EventGroupEnum.TRADE;
 
-    private String domain;
-
-    private EventGroupEnum group;
+@Event(group = TRADE)
+public class EventTrade extends AbstractEvent {
 
     private EventTypeTradeEnum type;
 
     private EventSubTypeTradeEnum subType;
 
-    private LocalDateTime time;
-
     public EventTrade() {
     }
 
-    public EventTrade(String domain, EventGroupEnum group, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
+    public EventTrade(String domain, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
         this.domain = domain;
-        this.group = group;
         this.type = type;
         this.subType = subType;
         this.time = time;
     }
 
-    public static EventTrade newInstance(String domain, EventGroupEnum group, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
-        return new EventTrade(domain, group, type, subType, time);
-    }
-
-    public String getDomain() {
-        return domain;
+    public static EventTrade newInstance(String domain, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
+        return new EventTrade(domain, type, subType, time);
     }
 
     @Override
-    public EventGroupEnum getGroup() {
-        return group;
-    }
-
     public EventTypeTradeEnum getType() {
         return type;
     }
@@ -51,7 +40,4 @@ public class EventTrade implements IEvent {
         return subType;
     }
 
-    public LocalDateTime getTime() {
-        return time;
-    }
 }
