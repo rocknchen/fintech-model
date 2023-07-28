@@ -27,6 +27,8 @@ public class IEventDeserializeController implements ModelDeserializeController<I
         int keyHeaderIndex = getKeyHeaderIndex(headerList, keyGroupName);
 
         String groupName = fieldList.get(keyHeaderIndex);
+
+        System.out.println(groupName);
         EventGroupEnum eventGroup = getGroup(groupName);
 
         Reflections reflections = new Reflections(new ConfigurationBuilder().forPackages(DEFAULT_PACKAGE));
