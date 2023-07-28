@@ -5,6 +5,7 @@ import com.hthk.fintech.model.event.basic.AbstractEvent;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Optional;
 
 import static com.hthk.fintech.config.FintechStaticData.DEFAULT_DATE_TIME_FORMAT;
 import static com.hthk.fintech.enumration.EventGroupEnum.TRADE;
@@ -32,7 +33,10 @@ public class EventTrade extends AbstractEvent {
 
     @Override
     public <R extends IEvent> R newInstance(String domain, String typeStr, String subTypeStr, String timeStr) {
-        return (R) new EventTrade(domain, EventTypeTradeEnum.valueOf(typeStr), EventSubTypeTradeEnum.valueOf(subTypeStr), LocalDateTime.parse(timeStr, DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)));
+        return (R) new EventTrade(domain,
+                Optional.ofNullable(typeStr).map(EventTypeTradeEnum::valueOf).orElse(null),
+                Optional.ofNullable(subTypeStr).map(EventSubTypeTradeEnum::valueOf).orElse(null),
+                LocalDateTime.parse(timeStr, DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)));
     }
 
     @Override
