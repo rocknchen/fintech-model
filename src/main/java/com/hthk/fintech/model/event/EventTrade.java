@@ -1,5 +1,6 @@
 package com.hthk.fintech.model.event;
 
+import com.hthk.common.utils.CustomStringUtils;
 import com.hthk.fintech.enumration.*;
 import com.hthk.fintech.model.event.basic.AbstractEvent;
 
@@ -34,8 +35,8 @@ public class EventTrade extends AbstractEvent {
     @Override
     public <R extends IEvent> R newInstance(String domain, String typeStr, String subTypeStr, String timeStr) {
         return (R) new EventTrade(domain,
-                Optional.ofNullable(typeStr).map(EventTypeTradeEnum::valueOf).orElse(null),
-                Optional.ofNullable(subTypeStr).map(EventSubTypeTradeEnum::valueOf).orElse(null),
+                CustomStringUtils.hasText(typeStr) ? EventTypeTradeEnum.valueOf(typeStr) : null,
+                CustomStringUtils.hasText(subTypeStr) ? EventSubTypeTradeEnum.valueOf(subTypeStr) : null,
                 LocalDateTime.parse(timeStr, DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)));
     }
 

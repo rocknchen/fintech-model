@@ -52,16 +52,11 @@ public class IEventDeserializeController implements ModelDeserializeController<I
      * TODO
      */
     private IEvent buildEventModel(Method newInstanceMethod, Object eventModelTemplate, List<String> fieldList) throws DeserializeException {
+
         String domain = fieldList.get(0);
         String type = fieldList.get(2);
         String subType = fieldList.get(3);
         String time = fieldList.get(4);
-
-        System.out.println(domain);
-        System.out.println(type);
-        System.out.println(subType);
-        System.out.println(time);
-
         try {
             return (IEvent) newInstanceMethod.invoke(eventModelTemplate, domain, type, subType, time);
         } catch (Exception e) {
