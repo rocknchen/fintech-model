@@ -26,4 +26,6 @@ public class FintechStaticData {
 
     public static final String KW_NEW_INSTANCE_METHOD_NAME = "newInstance";
 
+    public static final String DEFAULT_NA_STRING = "NA";
+
 }
