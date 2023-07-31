@@ -58,9 +58,13 @@ public class IEventDeserializeController implements ModelDeserializeController<I
         String domain = fieldList.get(1);
         String type = fieldList.get(3);
         String subType = fieldList.get(4);
-        String time = fieldList.get(5);
+        String supplementary1 = fieldList.get(5);
+        String supplementary2 = fieldList.get(6);
+        String supplementary3 = fieldList.get(7);
+        String time = fieldList.get(8);
+
         try {
-            IEvent event = (IEvent) newInstanceMethod.invoke(eventModelTemplate, domain, type, subType, time);
+            IEvent event = (IEvent) newInstanceMethod.invoke(eventModelTemplate, domain, type, subType, time, supplementary1, supplementary2, supplementary3);
             Method setIdMethod = AbstractEvent.class.getDeclaredMethod("setId", String.class);
             setIdMethod.invoke(event, id);
             return event;
@@ -80,7 +84,7 @@ public class IEventDeserializeController implements ModelDeserializeController<I
 
     private Method getInstanceBuildMethod(Class<? extends IEvent> eventClz) throws DeserializeException {
         try {
-            return eventClz.getDeclaredMethod(KW_NEW_INSTANCE_METHOD_NAME, String.class, String.class, String.class, String.class);
+            return eventClz.getDeclaredMethod(KW_NEW_INSTANCE_METHOD_NAME, String.class, String.class, String.class, String.class, String.class, String.class, String.class);
         } catch (NoSuchMethodException e) {
             throw new DeserializeException(e.getMessage(), e);
         }

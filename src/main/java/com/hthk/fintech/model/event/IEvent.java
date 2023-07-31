@@ -9,7 +9,7 @@ import com.hthk.fintech.serialize.impl.IEventDeserializeController;
 
 import java.time.LocalDateTime;
 
-@FieldOrder({"id", "domain", "group", "type", "subType", "time"})
+@FieldOrder({"id", "domain", "group", "type", "subType", "supplementary1", "supplementary2", "supplementary3", "time"})
 @CSVModel(deserializeController = IEventDeserializeController.class)
 public interface IEvent {
 
@@ -27,6 +27,21 @@ public interface IEvent {
 
     @CSVField(header = "SubType")
     Enum<?> getSubType();
+
+    @CSVField(header = "Supplementary_1")
+    default String getSupplementary1() {
+        return null;
+    }
+
+    @CSVField(header = "Supplementary_2")
+    default String getSupplementary2() {
+        return null;
+    }
+
+    @CSVField(header = "Supplementary_3")
+    default String getSupplementary3() {
+        return null;
+    }
 
     @CSVField(header = "Time", converter = AttLocalDateTimeConverter.class)
     LocalDateTime getTime();
