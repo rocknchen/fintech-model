@@ -9,9 +9,12 @@ import com.hthk.fintech.serialize.impl.IEventDeserializeController;
 
 import java.time.LocalDateTime;
 
-@FieldOrder({"domain", "group", "type", "subType", "time"})
+@FieldOrder({"id", "domain", "group", "type", "subType", "time"})
 @CSVModel(deserializeController = IEventDeserializeController.class)
 public interface IEvent {
+
+    @CSVField(header = "ID")
+    String getId();
 
     @CSVField(header = "Domain")
     String getDomain();
