@@ -22,21 +22,20 @@ public class EventTrade extends AbstractEvent {
     public EventTrade() {
     }
 
-    public EventTrade(String id, String domain, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
-        this.id = id;
+    public EventTrade(String domain, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
         this.domain = domain;
         this.type = type;
         this.subType = subType;
         this.time = time;
     }
 
-    public static EventTrade newInstance(String id, String domain, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
-        return new EventTrade(id, domain, type, subType, time);
+    public static EventTrade newInstance(String domain, EventTypeTradeEnum type, EventSubTypeTradeEnum subType, LocalDateTime time) {
+        return new EventTrade(domain, type, subType, time);
     }
 
     @Override
-    public <R extends IEvent> R newInstance(String id, String domain, String typeStr, String subTypeStr, String timeStr) {
-        return (R) new EventTrade(id, domain,
+    public <R extends IEvent> R newInstance(String domain, String typeStr, String subTypeStr, String timeStr) {
+        return (R) new EventTrade(domain,
                 CustomStringUtils.hasText(typeStr) ? EventTypeTradeEnum.valueOf(typeStr) : null,
                 CustomStringUtils.hasText(subTypeStr) ? EventSubTypeTradeEnum.valueOf(subTypeStr) : null,
                 LocalDateTime.parse(timeStr, DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)));
