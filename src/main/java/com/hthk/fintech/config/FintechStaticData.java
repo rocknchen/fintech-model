@@ -28,4 +28,6 @@ public class FintechStaticData {
 
     public static final String DEFAULT_NA_STRING = "NA";
 
+    public static final String KW_REQUEST_FILE = "req_file";
+
 }
