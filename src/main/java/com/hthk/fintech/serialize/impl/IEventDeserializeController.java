@@ -5,6 +5,7 @@ import com.hthk.fintech.enumration.Event;
 import com.hthk.fintech.enumration.EventGroupEnum;
 import com.hthk.fintech.exception.DeserializeException;
 import com.hthk.fintech.model.event.IEvent;
+import com.hthk.fintech.model.event.basic.AbstractEvent;
 import com.hthk.fintech.serialize.ModelDeserializeController;
 import org.reflections.Reflections;
 import org.reflections.util.ConfigurationBuilder;
@@ -53,12 +54,16 @@ public class IEventDeserializeController implements ModelDeserializeController<I
      */
     private IEvent buildEventModel(Method newInstanceMethod, Object eventModelTemplate, List<String> fieldList) throws DeserializeException {
 
+        String id = fieldList.get(0);
         String domain = fieldList.get(1);
         String type = fieldList.get(3);
         String subType = fieldList.get(4);
         String time = fieldList.get(5);
         try {
-            return (IEvent) newInstanceMethod.invoke(eventModelTemplate, domain, type, subType, time);
+            IEvent event = (IEvent) newInstanceMethod.invoke(eventModelTemplate, domain, type, subType, time);
+            Method setIdMethod = AbstractEvent.class.getDeclaredMethod("setId", String.class);
+            setIdMethod.invoke(event, id);
+            return event;
         } catch (Exception e) {
             e.printStackTrace();
             throw new DeserializeException(e.getMessage(), e);
