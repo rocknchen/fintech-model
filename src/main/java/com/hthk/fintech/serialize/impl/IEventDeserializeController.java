@@ -84,7 +84,7 @@ public class IEventDeserializeController implements ModelDeserializeController<I
 
     private Method getInstanceBuildMethod(Class<? extends IEvent> eventClz) throws DeserializeException {
         try {
-            return eventClz.getDeclaredMethod(KW_NEW_INSTANCE_METHOD_NAME, String.class, String.class, String.class, String.class, String.class, String.class, String.class);
+            return AbstractEvent.class.getDeclaredMethod(KW_NEW_INSTANCE_METHOD_NAME, String.class, String.class, String.class, String.class, String.class, String.class, String.class);
         } catch (NoSuchMethodException e) {
             throw new DeserializeException(e.getMessage(), e);
         }
