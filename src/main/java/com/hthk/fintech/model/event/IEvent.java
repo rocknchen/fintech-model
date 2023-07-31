@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @CSVModel(deserializeController = IEventDeserializeController.class)
 public interface IEvent {
 
-    @CSVField(header = "ID")
+    @CSVField(header = "id")
     String getId();
 
     @CSVField(header = "Domain")
