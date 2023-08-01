@@ -1,20 +1,22 @@
 package com.hthk.fintech.model.task.dto;
 
+import com.hthk.fintech.enumration.TaskTypeEnum;
+
 import java.util.List;
 
 public class ScheduledTaskReqDTO {
 
-    private String type;
+    private TaskTypeEnum type;
 
     private String cronExpression;
 
     private List<String> taskIdList;
 
-    public String getType() {
+    public TaskTypeEnum getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(TaskTypeEnum type) {
         this.type = type;
     }
 
