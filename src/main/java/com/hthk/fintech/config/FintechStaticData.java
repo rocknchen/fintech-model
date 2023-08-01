@@ -30,4 +30,6 @@ public class FintechStaticData {
 
     public static final String KW_REQUEST_FILE = "req_file";
 
+    public static final String QUARTZ_DEFAULT_GROUP = "ROCK_LOCAL";
+
 }
