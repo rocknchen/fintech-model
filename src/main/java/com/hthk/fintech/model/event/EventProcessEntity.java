@@ -4,12 +4,12 @@ import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.CSVModel;
 import com.hthk.fintech.enumration.EventProcessStatusEnum;
 import com.hthk.fintech.enumration.FieldOrder;
-import com.hthk.fintech.serialize.impl.IEventDeserializeController;
+import com.hthk.fintech.serialize.impl.EventProcessEntityDeserializeController;
 
 import java.time.LocalDateTime;
 
 @FieldOrder({"name", "id", "eventId", "status", "updatedDateTime"})
-@CSVModel(deserializeController = IEventDeserializeController.class)
+@CSVModel(deserializeController = EventProcessEntityDeserializeController.class)
 public class EventProcessEntity {
 
     private String name;
