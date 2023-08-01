@@ -6,6 +6,8 @@ import java.util.List;
 
 public class EngineCriteria {
 
+    private String eventId;
+
     private String name;
 
     private List<EventProcessStatusEnum> statusList;
@@ -16,6 +18,14 @@ public class EngineCriteria {
     public EngineCriteria(String name, List<EventProcessStatusEnum> statusList) {
         this.name = name;
         this.statusList = statusList;
+    }
+
+    public String getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
     }
 
     public String getName() {
