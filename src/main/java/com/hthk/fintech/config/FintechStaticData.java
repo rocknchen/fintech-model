@@ -1,5 +1,9 @@
 package com.hthk.fintech.config;
 
+import com.hthk.fintech.enumration.EventProcessStatusEnum;
+
+import java.util.*;
+
 public class FintechStaticData {
 
     public static final String DOMAIN_CALYPSO = "CALYPSO";
@@ -37,5 +41,8 @@ public class FintechStaticData {
     public static final String KW_REQUEST_FILE = "req_file";
 
     public static final String QUARTZ_DEFAULT_GROUP = "ROCK_LOCAL";
+
+    public static final List<EventProcessStatusEnum> EVENT_PROCESS_DONE_STATUS_LIST
+            = Arrays.asList(EventProcessStatusEnum.DONE, EventProcessStatusEnum.SKIPPED, EventProcessStatusEnum.FAILED);
 
 }
