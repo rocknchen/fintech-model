@@ -10,7 +10,17 @@ public class ScheduledTaskReqDTO {
 
     private String cronExpression;
 
+    private String taskId;
+
     private List<String> taskIdList;
+
+    public String getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
 
     public TaskTypeEnum getType() {
         return type;
