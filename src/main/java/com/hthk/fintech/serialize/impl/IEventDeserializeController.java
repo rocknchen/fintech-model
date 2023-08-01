@@ -4,6 +4,7 @@ import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.Event;
 import com.hthk.fintech.enumration.EventGroupEnum;
 import com.hthk.fintech.exception.DeserializeException;
+import com.hthk.fintech.exception.ServiceException;
 import com.hthk.fintech.model.event.IEvent;
 import com.hthk.fintech.model.event.basic.AbstractEvent;
 import com.hthk.fintech.serialize.ModelDeserializeController;
@@ -27,7 +28,16 @@ public class IEventDeserializeController implements ModelDeserializeController<I
         String keyGroupName = getKeyGroupName();
         int keyHeaderIndex = getKeyHeaderIndex(headerList, keyGroupName);
 
-        String groupName = fieldList.get(keyHeaderIndex);
+        String groupName = null;
+        try {
+            groupName = fieldList.get(keyHeaderIndex);
+        } catch (Exception e) {
+            String errMsg =
+                    headerList.stream().collect(Collectors.joining(",")) + "\r\n"
+                            + fieldList.stream().collect(Collectors.joining(",")) + "\r\n"
+                            + e.getMessage();
+            throw new DeserializeException(errMsg, e);
+        }
 
         EventGroupEnum eventGroup = getGroup(groupName);
 
