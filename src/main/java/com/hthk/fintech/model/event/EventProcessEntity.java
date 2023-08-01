@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 
 public class EventProcessEntity {
 
+    private String name;
+
     private String id;
 
     private String eventId;
@@ -17,11 +19,19 @@ public class EventProcessEntity {
     public EventProcessEntity() {
     }
 
-    public EventProcessEntity(String id, String eventId, EventProcessStatusEnum status, LocalDateTime updatedDateTime) {
-        this.id = id;
+    public EventProcessEntity(String name, String eventId, EventProcessStatusEnum status, LocalDateTime updatedDateTime) {
+        this.name = name;
         this.eventId = eventId;
         this.status = status;
         this.updatedDateTime = updatedDateTime;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getId() {
