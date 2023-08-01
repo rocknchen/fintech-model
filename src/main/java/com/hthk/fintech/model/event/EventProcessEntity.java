@@ -14,6 +14,16 @@ public class EventProcessEntity {
 
     private LocalDateTime updatedDateTime;
 
+    public EventProcessEntity() {
+    }
+
+    public EventProcessEntity(String id, String eventId, EventProcessStatusEnum status, LocalDateTime updatedDateTime) {
+        this.id = id;
+        this.eventId = eventId;
+        this.status = status;
+        this.updatedDateTime = updatedDateTime;
+    }
+
     public String getId() {
         return id;
     }
