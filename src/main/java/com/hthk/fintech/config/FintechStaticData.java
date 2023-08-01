@@ -2,6 +2,8 @@ package com.hthk.fintech.config;
 
 public class FintechStaticData {
 
+    public static final String DOMAIN_CALYPSO = "CALYPSO";
+
     public static final String DEFAULT_PACKAGE = "com.hthk";
 
     public static final String DEFAULT_APP_CONTEXT_FILE = "fintech/context-local.xml";
