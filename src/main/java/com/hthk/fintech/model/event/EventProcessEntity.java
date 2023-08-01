@@ -1,9 +1,12 @@
 package com.hthk.fintech.model.event;
 
+import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.EventProcessStatusEnum;
+import com.hthk.fintech.enumration.FieldOrder;
 
 import java.time.LocalDateTime;
 
+@FieldOrder({"name", "id", "eventId", "status", "updatedDateTime"})
 public class EventProcessEntity {
 
     private String name;
@@ -26,6 +29,7 @@ public class EventProcessEntity {
         this.updatedDateTime = updatedDateTime;
     }
 
+    @CSVField(header = "name")
     public String getName() {
         return name;
     }
@@ -34,6 +38,7 @@ public class EventProcessEntity {
         this.name = name;
     }
 
+    @CSVField(header = "id")
     public String getId() {
         return id;
     }
@@ -42,6 +47,7 @@ public class EventProcessEntity {
         this.id = id;
     }
 
+    @CSVField(header = "event id")
     public String getEventId() {
         return eventId;
     }
@@ -50,6 +56,7 @@ public class EventProcessEntity {
         this.eventId = eventId;
     }
 
+    @CSVField(header = "status")
     public EventProcessStatusEnum getStatus() {
         return status;
     }
@@ -58,6 +65,7 @@ public class EventProcessEntity {
         this.status = status;
     }
 
+    @CSVField(header = "updated date time")
     public LocalDateTime getUpdatedDateTime() {
         return updatedDateTime;
     }
