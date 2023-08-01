@@ -1,5 +1,6 @@
 package com.hthk.fintech.model.event;
 
+import com.hthk.fintech.converter.impl.AttLocalDateTimeConverter;
 import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.CSVModel;
 import com.hthk.fintech.enumration.EventProcessStatusEnum;
@@ -68,7 +69,7 @@ public class EventProcessEntity {
         this.status = status;
     }
 
-    @CSVField(header = "updated date time")
+    @CSVField(header = "updated date time", converter = AttLocalDateTimeConverter.class)
     public LocalDateTime getUpdatedDateTime() {
         return updatedDateTime;
     }
