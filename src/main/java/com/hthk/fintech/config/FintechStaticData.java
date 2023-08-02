@@ -18,6 +18,8 @@ public class FintechStaticData {
 
     public static final String DEFAULT_DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
+    public static final String SIMPLE_DATE_TIME_FORMAT = "yyyyMMdd_HHmmss";
+
     public static final String KW_SAVE_EVENT = "SAVE EVENT";
 
     public static final String KW_EVENT_TIME = "EVENT TIME";
