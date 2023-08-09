@@ -6,14 +6,14 @@ import java.time.LocalDate;
 
 public abstract class AbstractEODQuote extends AbstractSnapshotQuote {
 
-    protected LocalDate quoteDate;
+    protected LocalDate date;
 
-    public LocalDate getQuoteDate() {
-        return quoteDate;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setQuoteDate(LocalDate quoteDate) {
-        this.quoteDate = quoteDate;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
 }

@@ -6,14 +6,13 @@ import java.time.LocalDateTime;
 
 public abstract class AbstractIntraDayQuote extends AbstractSnapshotQuote {
 
-    protected LocalDateTime quoteDateTime;
+    protected LocalDateTime dateTime;
 
-    public LocalDateTime getQuoteDateTime() {
-        return quoteDateTime;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
-    public void setQuoteDateTime(LocalDateTime quoteDateTime) {
-        this.quoteDateTime = quoteDateTime;
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
-
 }
