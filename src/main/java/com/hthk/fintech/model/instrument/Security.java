@@ -4,7 +4,7 @@ import com.hthk.fintech.enumration.Instrument;
 import com.hthk.fintech.enumration.SecurityGroupEnum;
 import com.hthk.fintech.model.instrument.basic.AbstractInstrument;
 
-import static com.hthk.fintech.enumration.InstrumentGroup.SECURITY;
+import static com.hthk.fintech.enumration.InstrumentGroupEnum.SECURITY;
 
 @Instrument(group = SECURITY)
 public class Security extends AbstractInstrument implements ISecurity {

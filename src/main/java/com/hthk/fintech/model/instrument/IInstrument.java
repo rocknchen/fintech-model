@@ -1,14 +1,14 @@
 package com.hthk.fintech.model.instrument;
 
 import com.hthk.fintech.enumration.Instrument;
-import com.hthk.fintech.enumration.InstrumentGroup;
+import com.hthk.fintech.enumration.InstrumentGroupEnum;
 import com.hthk.fintech.enumration.SecurityCodeTypeEnum;
 
 import java.util.Map;
 
 public interface IInstrument {
 
-    default InstrumentGroup getInstrumentGroup() {
+    default InstrumentGroupEnum getInstrumentGroup() {
         return this.getClass().getAnnotation(Instrument.class).group();
     }
 

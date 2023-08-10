@@ -3,7 +3,7 @@ package com.hthk.fintech.enumration;
 /**
  * BASIC. i.e. Swap
  */
-public enum InstrumentGroup {
+public enum InstrumentGroupEnum {
 
     SECURITY, BASIC;
 
