@@ -19,5 +19,5 @@ public class Security extends AbstractInstrument implements ISecurity {
     public void setSecurityGroup(SecurityGroupEnum securityGroup) {
         this.securityGroup = securityGroup;
     }
-    
+
 }
