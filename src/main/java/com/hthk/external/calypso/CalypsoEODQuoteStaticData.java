@@ -10,5 +10,6 @@ public class CalypsoEODQuoteStaticData {
 
     public static final String KW_ATTR_CALYPSO_EOD_QUOTE_UPDATED_USER = "Calypso EOD Quote Updated User";
 
+    public static final String KW_ATTR_CALYPSO_EOD_QUOTE_SOURCE = "Calypso EOD Quote Source";
 
 }
