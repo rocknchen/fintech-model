@@ -1,10 +1,11 @@
-package com.hthk.fintech.model.quote;
+package com.hthk.fintech.model.quote.basic;
 
 import com.hthk.fintech.enumration.QuoteTypeEnum;
+import com.hthk.fintech.model.quote.IInstrumentQuote;
 
 import java.math.BigDecimal;
 
-public class InstrumentQuote implements IInstrumentQuote {
+public abstract class AbstractInstrumentQuote implements IInstrumentQuote {
 
     protected QuoteTypeEnum quoteType;
 
