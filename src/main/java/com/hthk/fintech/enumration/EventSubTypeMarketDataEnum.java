@@ -2,6 +2,6 @@ package com.hthk.fintech.enumration;
 
 public enum EventSubTypeMarketDataEnum {
 
-    READY;
+    REFRESH_0900_HKT, READY;
 
 }
