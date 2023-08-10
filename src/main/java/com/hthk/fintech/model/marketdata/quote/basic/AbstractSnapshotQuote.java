@@ -1,9 +1,12 @@
 package com.hthk.fintech.model.marketdata.quote.basic;
 
+import com.hthk.fintech.model.entity.basic.AbstractEntity;
 import com.hthk.fintech.model.instrument.IInstrument;
 import com.hthk.fintech.model.quote.IQuote;
 
-public abstract class AbstractSnapshotQuote<I extends IInstrument, Q extends IQuote> {
+public abstract class AbstractSnapshotQuote<I extends IInstrument, Q extends IQuote>
+
+        extends AbstractEntity {
 
     protected I instrument;
 
