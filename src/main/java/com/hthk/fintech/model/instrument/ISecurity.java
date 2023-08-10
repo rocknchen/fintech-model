@@ -1,11 +1,9 @@
 package com.hthk.fintech.model.instrument;
 
-import com.hthk.fintech.enumration.SecurityCodeTypeEnum;
-
-import java.util.Map;
+import com.hthk.fintech.enumration.SecurityGroupEnum;
 
 public interface ISecurity extends IInstrument {
 
-    Map<SecurityCodeTypeEnum, String> getSecurityCodeMap();
+    SecurityGroupEnum getSecurityGroup();
 
 }
