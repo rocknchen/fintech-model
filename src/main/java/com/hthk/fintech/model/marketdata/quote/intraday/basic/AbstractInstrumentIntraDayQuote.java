@@ -1,10 +1,10 @@
 package com.hthk.fintech.model.marketdata.quote.intraday.basic;
 
-import com.hthk.fintech.model.marketdata.quote.basic.AbstractSnapshotQuote;
+import com.hthk.fintech.model.marketdata.quote.basic.AbstractInstrumentSnapshotQuote;
 
 import java.time.LocalDateTime;
 
-public abstract class AbstractIntraDayQuote extends AbstractSnapshotQuote {
+public abstract class AbstractInstrumentIntraDayQuote extends AbstractInstrumentSnapshotQuote {
 
     protected LocalDateTime dateTime;
 

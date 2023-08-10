@@ -1,10 +1,10 @@
 package com.hthk.fintech.model.marketdata.quote.eod.basic;
 
-import com.hthk.fintech.model.marketdata.quote.basic.AbstractSnapshotQuote;
+import com.hthk.fintech.model.marketdata.quote.basic.AbstractInstrumentSnapshotQuote;
 
 import java.time.LocalDate;
 
-public abstract class AbstractEODQuote extends AbstractSnapshotQuote {
+public abstract class AbstractInstrumentEODQuote extends AbstractInstrumentSnapshotQuote {
 
     protected LocalDate date;
 
