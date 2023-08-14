@@ -9,6 +9,8 @@ public class FintechStaticData {
 
     public static final String DOMAIN_CALYPSO = "CALYPSO";
 
+    public static String GBK_FILE_CHARSET_NAME = "GBK";
+
     public static String DEFAULT_FILE_CHARSET_NAME = "utf-8";
 
     public static final String DEFAULT_PACKAGE = "com.hthk";
