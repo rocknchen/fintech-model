@@ -9,7 +9,9 @@ public class FintechStaticData {
 
     public static final String DOMAIN_CALYPSO = "CALYPSO";
 
-    public static String GBK_FILE_CHARSET_NAME = "GBK";
+    public static String CHARSET_GBK = "GBK";
+
+    public static String CHARSET_GB2312 = "GB2312";
 
     public static String DEFAULT_FILE_CHARSET_NAME = "utf-8";
 
