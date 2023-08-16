@@ -1,5 +1,6 @@
 package com.hthk.calypsox.model.staticdata.dto;
 
+import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
@@ -11,32 +12,46 @@ import com.hthk.fintech.enumration.FieldOrder;
 })
 public class FeedAddressCalCSVDTO {
 
+    @CSVField(header = "Feed")
     private String feed;
 
+    @CSVField(header = "Quote Type")
     private String quoteType;
 
+    @CSVField(header = "Quote Address")
     private String quoteAddress;
 
+    @CSVField(header = "Feed Address")
     private String feedAddress;
 
+    @CSVField(header = "Scale")
     private String scale;
 
+    @CSVField(header = "Spread")
     private String spread;
 
+    @CSVField(header = "Bid")
     private String bid;
 
+    @CSVField(header = "Ask")
     private String ask;
 
+    @CSVField(header = "High")
     private String high;
 
+    @CSVField(header = "Last")
     private String last;
 
+    @CSVField(header = "Open")
     private String open;
 
+    @CSVField(header = "Close")
     private String close;
 
+    @CSVField(header = "Low")
     private String low;
 
+    @CSVField(header = "Date")
     private String date;
 
     public String getFeed() {
