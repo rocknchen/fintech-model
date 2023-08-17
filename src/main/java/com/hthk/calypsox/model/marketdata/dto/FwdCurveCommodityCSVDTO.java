@@ -9,22 +9,22 @@ import com.hthk.fintech.enumration.FieldOrder;
 })
 public class FwdCurveCommodityCSVDTO {
 
-    @CSVField(header = "name")
+    @CSVField(header = "Name")
     private String name;
 
-    @CSVField(header = "type")
+    @CSVField(header = "Type")
     private String type;
 
-    @CSVField(header = "date")
+    @CSVField(header = "Date")
     private String date;
 
-    @CSVField(header = "time")
+    @CSVField(header = "Time")
     private String time;
 
-    @CSVField(header = "underlying")
+    @CSVField(header = "Underlying")
     private String underlying;
 
-    @CSVField(header = "quote")
+    @CSVField(header = "Quote")
     private String quote;
 
     public String getName() {
