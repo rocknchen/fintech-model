@@ -54,4 +54,12 @@ public class FintechStaticData {
     public static final List<EventProcessStatusEnum> EVENT_PROCESS_DONE_STATUS_LIST
             = Arrays.asList(EventProcessStatusEnum.DONE, EventProcessStatusEnum.SKIPPED, EventProcessStatusEnum.FAILED);
 
+    public static final String ROCK_HTSC_EMAIL = "rockchen@htsc.com";
+
+    public static final String ROCK_PERSONAL_EMAIL = "fatlon@sina.cn";
+
+    public static final List<String> EMAIL_RECEIVER_TEST_LIST = Arrays.asList(ROCK_HTSC_EMAIL);
+
+    public static final List<String> EMAIL_CC_TEST_LIST = Arrays.asList(ROCK_PERSONAL_EMAIL);
+
 }
