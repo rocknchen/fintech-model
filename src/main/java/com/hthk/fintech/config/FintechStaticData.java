@@ -58,6 +58,8 @@ public class FintechStaticData {
 
     public static final String ROCK_PERSONAL_EMAIL = "fatlon@sina.cn";
 
+    public static final String ROCK_SIGN_EMAIL = "Rock CHEN";
+
     public static final List<String> EMAIL_RECEIVER_TEST_LIST = Arrays.asList(ROCK_HTSC_EMAIL);
 
     public static final List<String> EMAIL_CC_TEST_LIST = Arrays.asList(ROCK_PERSONAL_EMAIL);
