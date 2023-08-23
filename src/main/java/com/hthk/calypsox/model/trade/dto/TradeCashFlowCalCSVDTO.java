@@ -7,11 +7,11 @@ import com.hthk.fintech.enumration.FieldOrder;
         "book", "productType", "productSubType",
         "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
         "payRec", "settlementDate", "settlementType", "fixedFloat",
-        "fixedRate",
         "rateIndex", "rateIndexTenor", "spread",
         "currency", "notional",
-        "fwdRate", "df",
-        "amount", "settlementAmount", "projectedAmount"
+        "rate", "fixedRate", "resetRate", "fwdRate",
+        "amount", "settlementAmount", "projectedAmount",
+        "df", "pv"
 })
 public class TradeCashFlowCalCSVDTO {
 
@@ -44,6 +44,12 @@ public class TradeCashFlowCalCSVDTO {
 
     @CSVField(header = "Trade Id")
     private String tradeId;
+
+    @CSVField(header = "Rate")
+    private String rate;
+
+    @CSVField(header = "Reset Rate")
+    private String resetRate;
 
     @CSVField(header = "Trade Keyword TRADE_ID_LINK")
     private String tradeKeywordTradeIdLink;
