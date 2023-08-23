@@ -6,11 +6,11 @@ import com.hthk.fintech.enumration.FieldOrder;
 @FieldOrder({
         "book", "productType", "productSubType",
         "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
-        "payRec", "settlementType", "fixedFloat",
+        "payRec", "date", "settlementType", "fixedFloat",
         "fixedRate",
         "rateIndex", "rateIndexTenor", "spread",
         "currency",
-        "amount", "date"
+        "amount"
 })
 public class TradeCashFlowCalCSVDTO {
 
