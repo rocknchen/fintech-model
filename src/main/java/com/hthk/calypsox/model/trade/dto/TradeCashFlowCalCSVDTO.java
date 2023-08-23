@@ -10,7 +10,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "fixedRate",
         "rateIndex", "rateIndexTenor", "spread",
         "currency",
-        "amount"
+        "amount", "settlementAmount", "projectedAmount"
 })
 public class TradeCashFlowCalCSVDTO {
 
@@ -59,8 +59,30 @@ public class TradeCashFlowCalCSVDTO {
     @CSVField(header = "Amount")
     private String amount;
 
+    @CSVField(header = "Settlement Amount")
+    private String settlementAmount;
+
+    @CSVField(header = "Projected Amount")
+    private String projectedAmount;
+
     @CSVField(header = "Settlement Date")
     private String settlementDate;
+
+    public String getSettlementAmount() {
+        return settlementAmount;
+    }
+
+    public void setSettlementAmount(String settlementAmount) {
+        this.settlementAmount = settlementAmount;
+    }
+
+    public String getProjectedAmount() {
+        return projectedAmount;
+    }
+
+    public void setProjectedAmount(String projectedAmount) {
+        this.projectedAmount = projectedAmount;
+    }
 
     public String getBook() {
         return book;
