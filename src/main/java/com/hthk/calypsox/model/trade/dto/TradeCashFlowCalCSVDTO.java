@@ -5,12 +5,11 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
         "book", "productType", "productSubType",
-        "fixedFloat",
+        "payRec", "fixedFloat",
         "fixedRate",
         "rateIndex", "rateIndexTenor", "spread",
         "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
-        "productKey",
-        "settlementType", "payRec", "currency",
+        "settlementType", "currency",
         "amount", "date"
 })
 public class TradeCashFlowCalCSVDTO {
@@ -44,6 +43,24 @@ public class TradeCashFlowCalCSVDTO {
 
     @CSVField(header = "Trade Id")
     private String tradeId;
+
+    @CSVField(header = "Trade Keyword TRADE_ID_LINK")
+    private String tradeKeywordTradeIdLink;
+
+    @CSVField(header = "Settlement Type")
+    private String settlementType;
+
+    @CSVField(header = "Pay Rec")
+    private String payRec;
+
+    @CSVField(header = "Currency")
+    private String currency;
+
+    @CSVField(header = "Amount")
+    private String amount;
+
+    @CSVField(header = "Date")
+    private String date;
 
     public String getBook() {
         return book;
@@ -125,26 +142,6 @@ public class TradeCashFlowCalCSVDTO {
         this.tradeKeywordTradeIdLink = tradeKeywordTradeIdLink;
     }
 
-    @CSVField(header = "Trade Keyword TRADE_ID_LINK")
-    private String tradeKeywordTradeIdLink;
-
-    @CSVField(header = "Product Key")
-    private String productKey;
-
-    @CSVField(header = "Settlement Type")
-    private String settlementType;
-
-    @CSVField(header = "Pay Rec")
-    private String payRec;
-
-    @CSVField(header = "Currency")
-    private String currency;
-
-    @CSVField(header = "Amount")
-    private String amount;
-
-    @CSVField(header = "Date")
-    private String date;
 
     public String getTradeId() {
         return tradeId;
@@ -152,14 +149,6 @@ public class TradeCashFlowCalCSVDTO {
 
     public void setTradeId(String tradeId) {
         this.tradeId = tradeId;
-    }
-
-    public String getProductKey() {
-        return productKey;
-    }
-
-    public void setProductKey(String productKey) {
-        this.productKey = productKey;
     }
 
     public String getSettlementType() {
