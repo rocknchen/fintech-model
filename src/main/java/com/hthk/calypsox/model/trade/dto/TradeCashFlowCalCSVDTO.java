@@ -9,7 +9,8 @@ import com.hthk.fintech.enumration.FieldOrder;
         "payRec", "settlementDate", "settlementType", "fixedFloat",
         "fixedRate",
         "rateIndex", "rateIndexTenor", "spread",
-        "currency",
+        "currency", "notional",
+        "fwdRate", "df",
         "amount", "settlementAmount", "projectedAmount"
 })
 public class TradeCashFlowCalCSVDTO {
@@ -56,6 +57,18 @@ public class TradeCashFlowCalCSVDTO {
     @CSVField(header = "Currency")
     private String currency;
 
+    @CSVField(header = "Notional")
+    private String notional;
+
+    @CSVField(header = "Forward Rate")
+    private String fwdRate;
+
+    @CSVField(header = "Discount Factor")
+    private String df;
+
+    @CSVField(header = "PV")
+    private String pv;
+
     @CSVField(header = "Amount")
     private String amount;
 
@@ -67,6 +80,38 @@ public class TradeCashFlowCalCSVDTO {
 
     @CSVField(header = "Settlement Date")
     private String settlementDate;
+
+    public String getNotional() {
+        return notional;
+    }
+
+    public void setNotional(String notional) {
+        this.notional = notional;
+    }
+
+    public String getFwdRate() {
+        return fwdRate;
+    }
+
+    public void setFwdRate(String fwdRate) {
+        this.fwdRate = fwdRate;
+    }
+
+    public String getDf() {
+        return df;
+    }
+
+    public void setDf(String df) {
+        this.df = df;
+    }
+
+    public String getPv() {
+        return pv;
+    }
+
+    public void setPv(String pv) {
+        this.pv = pv;
+    }
 
     public String getSettlementAmount() {
         return settlementAmount;
