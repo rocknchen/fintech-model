@@ -5,10 +5,10 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
         "book", "productType", "productSubType",
+        "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
         "payRec", "settlementType", "fixedFloat",
         "fixedRate",
         "rateIndex", "rateIndexTenor", "spread",
-        "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
         "currency",
         "amount", "date"
 })
