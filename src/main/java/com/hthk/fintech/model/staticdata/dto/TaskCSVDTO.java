@@ -3,7 +3,7 @@ package com.hthk.fintech.model.staticdata.dto;
 import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
-@FieldOrder({"taskType", "externalReference", "tradeFilter",
+@FieldOrder({"taskType", "externalReference", "taskId", "tradeFilter",
         "pricingEnv", "timeZone",
         "valuationTime",
         "valuationDateOffset", "businessHolidays",
@@ -20,6 +20,9 @@ public class TaskCSVDTO {
 
     @CSVField(header = "External Reference")
     private String externalReference;
+
+    @CSVField(header = "Task Id")
+    private String taskId;
 
     @CSVField(header = "Trade Filter")
     private String tradeFilter;
@@ -65,6 +68,14 @@ public class TaskCSVDTO {
 
     @CSVField(header = "Functional Area")
     private String functionalArea;
+
+    public String getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
 
     public String getDownStreamFile() {
         return downStreamFile;
