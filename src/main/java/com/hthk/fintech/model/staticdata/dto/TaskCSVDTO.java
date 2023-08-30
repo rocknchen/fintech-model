@@ -7,6 +7,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "pricingEnv", "timeZone",
         "valuationTime",
         "valuationDateOffset", "businessHolidays",
+        "functionalArea", "downStreamFile",
         "pnlParam", "reportType", "reportFileName",
         "reportFormat", "reportTemplateName",
         "reportOutputTemplate",
@@ -58,6 +59,28 @@ public class TaskCSVDTO {
 
     @CSVField(header = "Report Output Template")
     private String reportOutputTemplate;
+
+    @CSVField(header = "Down Stream File")
+    private String downStreamFile;
+
+    @CSVField(header = "Functional Area")
+    private String functionalArea;
+
+    public String getDownStreamFile() {
+        return downStreamFile;
+    }
+
+    public void setDownStreamFile(String downStreamFile) {
+        this.downStreamFile = downStreamFile;
+    }
+
+    public String getFunctionalArea() {
+        return functionalArea;
+    }
+
+    public void setFunctionalArea(String functionalArea) {
+        this.functionalArea = functionalArea;
+    }
 
     public String getReportType() {
         return reportType;
