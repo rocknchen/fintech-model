@@ -42,6 +42,61 @@ public class TaskCSVDTO {
     @CSVField(header = "PnL Param")
     private String pnlParam;
 
+    @CSVField(header = "Report Type")
+    private String reportType;
+
+    @CSVField(header = "Report File Name")
+    private String reportFileName;
+
+    @CSVField(header = "Report Format")
+    private String reportFormat;
+
+    @CSVField(header = "Report Template Name")
+    private String reportTemplateName;
+
+    @CSVField(header = "Report Output Template")
+    private String reportOutputTemplate;
+
+    public String getReportType() {
+        return reportType;
+    }
+
+    public void setReportType(String reportType) {
+        this.reportType = reportType;
+    }
+
+    public String getReportFileName() {
+        return reportFileName;
+    }
+
+    public void setReportFileName(String reportFileName) {
+        this.reportFileName = reportFileName;
+    }
+
+    public String getReportFormat() {
+        return reportFormat;
+    }
+
+    public void setReportFormat(String reportFormat) {
+        this.reportFormat = reportFormat;
+    }
+
+    public String getReportTemplateName() {
+        return reportTemplateName;
+    }
+
+    public void setReportTemplateName(String reportTemplateName) {
+        this.reportTemplateName = reportTemplateName;
+    }
+
+    public String getReportOutputTemplate() {
+        return reportOutputTemplate;
+    }
+
+    public void setReportOutputTemplate(String reportOutputTemplate) {
+        this.reportOutputTemplate = reportOutputTemplate;
+    }
+
     public String getPnlParam() {
         return pnlParam;
     }
