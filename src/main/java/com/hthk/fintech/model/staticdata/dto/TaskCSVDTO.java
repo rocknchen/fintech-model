@@ -5,7 +5,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({"externalReference", "tradeFilter",
         "pricingEnv", "timeZone",
-        "valuationTimeHour", "valuationTimeMinute",
+        "valuationTime",
         "valuationDateOffset", "businessHolidays",
         "attributes"
 })
@@ -23,11 +23,8 @@ public class TaskCSVDTO {
     @CSVField(header = "Time Zone")
     private String timeZone;
 
-    @CSVField(header = "Val Time Hour")
-    private String valuationTimeHour;
-
-    @CSVField(header = "Val Time Minute")
-    private String valuationTimeMinute;
+    @CSVField(header = "Val Time")
+    private String valuationTime;
 
     @CSVField(header = "Date Offset")
     private String valuationDateOffset;
@@ -70,20 +67,12 @@ public class TaskCSVDTO {
         this.timeZone = timeZone;
     }
 
-    public String getValuationTimeHour() {
-        return valuationTimeHour;
+    public String getValuationTime() {
+        return valuationTime;
     }
 
-    public void setValuationTimeHour(String valuationTimeHour) {
-        this.valuationTimeHour = valuationTimeHour;
-    }
-
-    public String getValuationTimeMinute() {
-        return valuationTimeMinute;
-    }
-
-    public void setValuationTimeMinute(String valuationTimeMinute) {
-        this.valuationTimeMinute = valuationTimeMinute;
+    public void setValuationTime(String valuationTime) {
+        this.valuationTime = valuationTime;
     }
 
     public String getValuationDateOffset() {
