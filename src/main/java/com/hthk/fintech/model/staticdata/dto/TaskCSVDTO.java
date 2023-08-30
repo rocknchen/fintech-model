@@ -7,7 +7,9 @@ import com.hthk.fintech.enumration.FieldOrder;
         "pricingEnv", "timeZone",
         "valuationTime",
         "valuationDateOffset", "businessHolidays",
-        "pnlParam",
+        "pnlParam", "reportType", "reportFileName",
+        "reportFormat", "reportTemplateName",
+        "reportOutputTemplate",
         "attributes"
 })
 public class TaskCSVDTO {
