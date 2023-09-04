@@ -8,7 +8,15 @@ import java.time.LocalDateTime;
 
 public abstract class AbstractEvent implements IEvent {
 
+    /**
+     * Unique ID for an Event
+     */
     protected String id;
+
+    /**
+     * 事件对应的实体信息编号
+     */
+    protected String referenceId;
 
     protected String domain;
 
