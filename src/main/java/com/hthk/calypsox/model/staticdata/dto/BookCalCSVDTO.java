@@ -4,9 +4,10 @@ import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
-        "id", "name", "legalEntity",
+        "legalEntity",
         "companyShortName", "department",
         "tradingDesk", "businessType", "business",
+        "id", "name",
         "baseCurrency",
         "omsSystem", "bbTraderPortfolio", "risk"
 })
