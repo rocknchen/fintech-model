@@ -7,7 +7,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "tradeId",
         "valuationDateTime",
         "pricingEnv",
-        "pv", "tv"
+        "pv", "pvBase", "tv"
 })
 public class PricingCalCSVDTO {
 
@@ -23,8 +23,19 @@ public class PricingCalCSVDTO {
     @CSVField(header = "PV")
     private String pv;
 
+    @CSVField(header = "PV_BASE")
+    private String pvBase;
+
     @CSVField(header = "TV")
     private String tv;
+
+    public String getPvBase() {
+        return pvBase;
+    }
+
+    public void setPvBase(String pvBase) {
+        this.pvBase = pvBase;
+    }
 
     public String getValuationDateTime() {
         return valuationDateTime;
