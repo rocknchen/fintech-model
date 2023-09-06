@@ -7,7 +7,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "tradeId",
         "valuationDateTime",
         "pricingEnv",
-        "PV", "TV"
+        "pv", "tv"
 })
 public class PricingCalCSVDTO {
 
