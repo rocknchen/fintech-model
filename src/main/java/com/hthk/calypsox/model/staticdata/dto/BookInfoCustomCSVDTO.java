@@ -5,7 +5,8 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
         "name",
-        "team"
+        "team",
+        "actionPoint"
 })
 public class BookInfoCustomCSVDTO {
 
@@ -14,6 +15,17 @@ public class BookInfoCustomCSVDTO {
 
     @CSVField(header = "Team")
     private String team;
+
+    @CSVField(header = "Fix Action Point")
+    private String actionPoint;
+
+    public String getActionPoint() {
+        return actionPoint;
+    }
+
+    public void setActionPoint(String actionPoint) {
+        this.actionPoint = actionPoint;
+    }
 
     public String getName() {
         return name;
