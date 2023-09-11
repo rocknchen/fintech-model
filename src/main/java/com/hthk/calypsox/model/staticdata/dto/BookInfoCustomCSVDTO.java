@@ -5,7 +5,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
         "name",
-        "team",
+        "category",
         "actionPoint", "remain", "remain2", "remain3"
 })
 public class BookInfoCustomCSVDTO {
@@ -13,8 +13,8 @@ public class BookInfoCustomCSVDTO {
     @CSVField(header = "Book Name")
     private String name;
 
-    @CSVField(header = "Team")
-    private String team;
+    @CSVField(header = "Book Category")
+    private String category;
 
     @CSVField(header = "Fix Action Point")
     private String actionPoint;
@@ -68,11 +68,11 @@ public class BookInfoCustomCSVDTO {
         this.name = name;
     }
 
-    public String getTeam() {
-        return team;
+    public String getCategory() {
+        return category;
     }
 
-    public void setTeam(String team) {
-        this.team = team;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
