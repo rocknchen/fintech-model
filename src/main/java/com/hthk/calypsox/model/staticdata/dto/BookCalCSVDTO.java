@@ -4,6 +4,7 @@ import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
+        "team",
         "legalEntity",
         "companyShortName", "department",
         "tradingDesk", "businessType", "business",
@@ -13,6 +14,9 @@ import com.hthk.fintech.enumration.FieldOrder;
         "actionPoint"
 })
 public class BookCalCSVDTO {
+
+    @CSVField(header = "Team")
+    private String team;
 
     @CSVField(header = "Book Id")
     private String id;
@@ -52,6 +56,14 @@ public class BookCalCSVDTO {
 
     @CSVField(header = "数据修复Action Point(如有)")
     private String actionPoint;
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
 
     public String getActionPoint() {
         return actionPoint;
