@@ -6,7 +6,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 @FieldOrder({
         "team",
         "legalEntity",
-        "companyShortName", "department",
+        "department",
         "tradingDesk", "businessType", "business",
         "id", "name",
         "baseCurrency",
@@ -24,14 +24,14 @@ public class BookCalCSVDTO {
     @CSVField(header = "Book Name")
     private String name;
 
-    @CSVField(header = "Legal Entity")
+    @CSVField(header = "法人主体")
     private String legalEntity;
 
     @CSVField(header = "Base Currency")
     private String baseCurrency;
 
-    @CSVField(header = "公司简称")
-    private String companyShortName;
+//    @CSVField(header = "公司简称")
+//    private String companyShortName;
 
     @CSVField(header = "Department")
     private String department;
@@ -105,13 +105,6 @@ public class BookCalCSVDTO {
         this.baseCurrency = baseCurrency;
     }
 
-    public String getCompanyShortName() {
-        return companyShortName;
-    }
-
-    public void setCompanyShortName(String companyShortName) {
-        this.companyShortName = companyShortName;
-    }
 
     public String getDepartment() {
         return department;
