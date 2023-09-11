@@ -8,7 +8,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "legalEntity",
         "department",
         "tradingDesk", "businessType", "business",
-        "id", "name",
+        "name",
         "baseCurrency",
         "omsSystem", "bbTraderPortfolio", "risk",
         "actionPoint"
@@ -18,8 +18,8 @@ public class BookCalCSVDTO {
     @CSVField(header = "Team")
     private String team;
 
-    @CSVField(header = "Book Id")
-    private String id;
+//    @CSVField(header = "Book Id")
+//    private String id;
 
     @CSVField(header = "Book Name")
     private String name;
@@ -71,14 +71,6 @@ public class BookCalCSVDTO {
 
     public void setActionPoint(String actionPoint) {
         this.actionPoint = actionPoint;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
