@@ -23,7 +23,7 @@ public class BookCalCSVDTO {
     @CSVField(header = "Book Name")
     private String name;
 
-    @CSVField(header = "法人主体")
+    @CSVField(header = "Legal Entity")
     private String legalEntity;
 
     @CSVField(header = "Base Currency")
