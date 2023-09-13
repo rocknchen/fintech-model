@@ -9,11 +9,10 @@ import com.hthk.fintech.enumration.FieldOrder;
         "name",
         "tradingDesk", "business", "businessType",
         "tradingDeskFix", "businessFix", "businessTypeFix",
-        "baseCurrency",
         "omsSystem", "bbTraderPortfolio", "risk",
         "isInBookTemplate",
-        "productRest",
-        "pnlTreatment",
+        "productRest", "pnlTreatment", "baseCurrency",
+        "baseCurrency",
         "actionPoint",
         "comments"
 })
