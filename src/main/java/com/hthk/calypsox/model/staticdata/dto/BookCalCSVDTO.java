@@ -12,7 +12,8 @@ import com.hthk.fintech.enumration.FieldOrder;
         "baseCurrency",
         "omsSystem", "bbTraderPortfolio", "risk",
         "isInBookTemplate",
-        "actionPoint"
+        "actionPoint",
+        "comments"
 })
 public class BookCalCSVDTO {
 
@@ -69,6 +70,17 @@ public class BookCalCSVDTO {
 
     @CSVField(header = "数据修复Action Point(如有)")
     private String actionPoint;
+
+    @CSVField(header = "Comments")
+    private String comments;
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
 
     public String getTradingDeskFix() {
         return tradingDeskFix;

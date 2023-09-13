@@ -6,6 +6,8 @@ import com.hthk.fintech.enumration.FieldOrder;
 @FieldOrder({
         "name",
         "category", "isInBookTemplate",
+        "tradingDeskFix", "businessTypeFix", "businessFix",
+        "comments",
         "actionPoint", "remain", "remain2", "remain3"
 })
 public class BookInfoCustomCSVDTO {
@@ -30,6 +32,50 @@ public class BookInfoCustomCSVDTO {
 
     @CSVField(header = "Remain Action 3")
     private String remain3;
+
+    @CSVField(header = "Comments")
+    private String comments;
+
+    @CSVField(header = "Trading Desk(调整后)")
+    private String tradingDeskFix;
+
+    @CSVField(header = "交易性质(调整后)")
+    private String businessTypeFix;
+
+    @CSVField(header = "业务类别(调整后)")
+    private String businessFix;
+
+    public String getTradingDeskFix() {
+        return tradingDeskFix;
+    }
+
+    public void setTradingDeskFix(String tradingDeskFix) {
+        this.tradingDeskFix = tradingDeskFix;
+    }
+
+    public String getBusinessTypeFix() {
+        return businessTypeFix;
+    }
+
+    public void setBusinessTypeFix(String businessTypeFix) {
+        this.businessTypeFix = businessTypeFix;
+    }
+
+    public String getBusinessFix() {
+        return businessFix;
+    }
+
+    public void setBusinessFix(String businessFix) {
+        this.businessFix = businessFix;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
 
     public String getIsInBookTemplate() {
         return isInBookTemplate;
