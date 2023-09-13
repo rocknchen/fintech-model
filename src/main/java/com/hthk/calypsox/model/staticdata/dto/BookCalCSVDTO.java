@@ -12,6 +12,8 @@ import com.hthk.fintech.enumration.FieldOrder;
         "baseCurrency",
         "omsSystem", "bbTraderPortfolio", "risk",
         "isInBookTemplate",
+        "productRest",
+        "pnlTreatment",
         "actionPoint",
         "comments"
 })
@@ -73,6 +75,28 @@ public class BookCalCSVDTO {
 
     @CSVField(header = "Comments")
     private String comments;
+
+    @CSVField(header = "Book Product Restriction")
+    private String productRest;
+
+    @CSVField(header = "Book PnL Treatment")
+    private String pnlTreatment;
+
+    public String getProductRest() {
+        return productRest;
+    }
+
+    public void setProductRest(String productRest) {
+        this.productRest = productRest;
+    }
+
+    public String getPnlTreatment() {
+        return pnlTreatment;
+    }
+
+    public void setPnlTreatment(String pnlTreatment) {
+        this.pnlTreatment = pnlTreatment;
+    }
 
     public String getComments() {
         return comments;
