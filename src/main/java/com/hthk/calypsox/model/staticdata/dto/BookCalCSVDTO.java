@@ -54,7 +54,7 @@ public class BookCalCSVDTO {
     @CSVField(header = "风险小组")
     private String risk;
 
-    @CSVField(header = "是否在booking template?")
+    @CSVField(header = "In Booking Template?")
     private String isInBookTemplate;
 
     @CSVField(header = "数据修复Action Point(如有)")

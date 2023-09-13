@@ -5,7 +5,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
         "name",
-        "category",
+        "category", "isInBookTemplate",
         "actionPoint", "remain", "remain2", "remain3"
 })
 public class BookInfoCustomCSVDTO {
@@ -15,6 +15,9 @@ public class BookInfoCustomCSVDTO {
 
     @CSVField(header = "Book Category")
     private String category;
+
+    @CSVField(header = "In Booking Template?")
+    private String isInBookTemplate;
 
     @CSVField(header = "Fix Action Point")
     private String actionPoint;
@@ -27,6 +30,14 @@ public class BookInfoCustomCSVDTO {
 
     @CSVField(header = "Remain Action 3")
     private String remain3;
+
+    public String getIsInBookTemplate() {
+        return isInBookTemplate;
+    }
+
+    public void setIsInBookTemplate(String isInBookTemplate) {
+        this.isInBookTemplate = isInBookTemplate;
+    }
 
     public String getRemain2() {
         return remain2;
