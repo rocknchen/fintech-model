@@ -9,11 +9,11 @@ import com.hthk.fintech.enumration.FieldOrder;
         "name",
         "tradingDesk", "business", "businessType",
         "tradingDeskFix", "businessFix", "businessTypeFix",
-        "omsSystem", "bbTraderPortfolio", "risk",
         "isInBookTemplate",
         "productRest", "pnlTreatment", "baseCurrency",
         "actionPoint",
-        "comments"
+        "comments",
+        "omsSystem", "bbTraderPortfolio", "risk"
 })
 public class BookCalCSVDTO {
 
