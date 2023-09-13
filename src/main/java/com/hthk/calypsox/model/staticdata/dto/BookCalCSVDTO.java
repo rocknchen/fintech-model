@@ -12,7 +12,6 @@ import com.hthk.fintech.enumration.FieldOrder;
         "omsSystem", "bbTraderPortfolio", "risk",
         "isInBookTemplate",
         "productRest", "pnlTreatment", "baseCurrency",
-        "baseCurrency",
         "actionPoint",
         "comments"
 })
