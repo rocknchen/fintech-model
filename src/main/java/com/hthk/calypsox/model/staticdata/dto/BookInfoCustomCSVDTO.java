@@ -9,6 +9,8 @@ import com.hthk.fintech.enumration.FieldOrder;
         "tradingDeskFix", "businessFix", "businessTypeFix",
         "isInBookTemplate",
         "comments",
+        "productRest",
+        "pnlTreatment",
         "actionPoint", "remain", "remain2", "remain3"
 })
 public class BookInfoCustomCSVDTO {
@@ -37,6 +39,12 @@ public class BookInfoCustomCSVDTO {
     @CSVField(header = "Comments")
     private String comments;
 
+    @CSVField(header = "Book Product Restriction")
+    private String productRest;
+
+    @CSVField(header = "Book PnL Treatment")
+    private String pnlTreatment;
+
     @CSVField(header = "Trading Desk(调整后)")
     private String tradingDeskFix;
 
@@ -45,6 +53,22 @@ public class BookInfoCustomCSVDTO {
 
     @CSVField(header = "业务类别(调整后)")
     private String businessFix;
+
+    public String getProductRest() {
+        return productRest;
+    }
+
+    public void setProductRest(String productRest) {
+        this.productRest = productRest;
+    }
+
+    public String getPnlTreatment() {
+        return pnlTreatment;
+    }
+
+    public void setPnlTreatment(String pnlTreatment) {
+        this.pnlTreatment = pnlTreatment;
+    }
 
     public String getTradingDeskFix() {
         return tradingDeskFix;
