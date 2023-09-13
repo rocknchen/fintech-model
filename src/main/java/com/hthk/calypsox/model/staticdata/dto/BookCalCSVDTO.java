@@ -6,8 +6,9 @@ import com.hthk.fintech.enumration.FieldOrder;
 @FieldOrder({
         "category",
         "legalEntity",
-        "tradingDesk", "businessType", "business",
         "name",
+        "tradingDesk", "businessType", "business",
+        "tradingDeskFix", "businessTypeFix", "businessFix",
         "baseCurrency",
         "omsSystem", "bbTraderPortfolio", "risk",
         "isInBookTemplate",
@@ -39,11 +40,20 @@ public class BookCalCSVDTO {
     @CSVField(header = "Trading Desk")
     private String tradingDesk;
 
+    @CSVField(header = "Trading Desk(调整后)")
+    private String tradingDeskFix;
+
     @CSVField(header = "交易性质")
     private String businessType;
 
+    @CSVField(header = "交易性质(调整后)")
+    private String businessTypeFix;
+
     @CSVField(header = "业务类别")
     private String business;
+
+    @CSVField(header = "业务类别(调整后)")
+    private String businessFix;
 
     @CSVField(header = "源头系统")
     private String omsSystem;
@@ -59,6 +69,30 @@ public class BookCalCSVDTO {
 
     @CSVField(header = "数据修复Action Point(如有)")
     private String actionPoint;
+
+    public String getTradingDeskFix() {
+        return tradingDeskFix;
+    }
+
+    public void setTradingDeskFix(String tradingDeskFix) {
+        this.tradingDeskFix = tradingDeskFix;
+    }
+
+    public String getBusinessTypeFix() {
+        return businessTypeFix;
+    }
+
+    public void setBusinessTypeFix(String businessTypeFix) {
+        this.businessTypeFix = businessTypeFix;
+    }
+
+    public String getBusinessFix() {
+        return businessFix;
+    }
+
+    public void setBusinessFix(String businessFix) {
+        this.businessFix = businessFix;
+    }
 
     public String getIsInBookTemplate() {
         return isInBookTemplate;
