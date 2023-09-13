@@ -9,7 +9,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "tradingDesk", "businessType", "business",
         "name",
         "baseCurrency",
-        "omsSystem", "bbTraderPortfolio", "risk",
+        "omsSystem", "bbTraderPortfolio",
         "actionPoint"
 })
 public class BookCalCSVDTO {
@@ -50,8 +50,8 @@ public class BookCalCSVDTO {
     @CSVField(header = "BB_TRADER_PORTFOLIO")
     private String bbTraderPortfolio;
 
-    @CSVField(header = "风险小组")
-    private String risk;
+//    @CSVField(header = "风险小组")
+//    private String risk;
 
     @CSVField(header = "数据修复Action Point(如有)")
     private String actionPoint;
@@ -137,11 +137,4 @@ public class BookCalCSVDTO {
         this.bbTraderPortfolio = bbTraderPortfolio;
     }
 
-    public String getRisk() {
-        return risk;
-    }
-
-    public void setRisk(String risk) {
-        this.risk = risk;
-    }
 }
