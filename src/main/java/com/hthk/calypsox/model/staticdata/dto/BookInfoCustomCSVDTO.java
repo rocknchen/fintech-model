@@ -5,8 +5,9 @@ import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
         "name",
-        "category", "isInBookTemplate",
-        "tradingDeskFix", "businessTypeFix", "businessFix",
+        "category",
+        "tradingDeskFix", "businessFix", "businessTypeFix",
+        "isInBookTemplate",
         "comments",
         "actionPoint", "remain", "remain2", "remain3"
 })
