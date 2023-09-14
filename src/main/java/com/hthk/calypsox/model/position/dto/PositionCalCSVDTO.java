@@ -1,5 +1,6 @@
 package com.hthk.calypsox.model.position.dto;
 
+import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
 @FieldOrder({
@@ -10,18 +11,25 @@ import com.hthk.fintech.enumration.FieldOrder;
 })
 public class PositionCalCSVDTO {
 
+    @CSVField(header = "Liquidation Key")
     private String liquidationKey;
 
+    @CSVField(header = "Liquidation Method")
     private String liquidationMethod;
 
+    @CSVField(header = "Book")
     private String book;
 
+    @CSVField(header = "Product")
     private String product;
 
+    @CSVField(header = "TRS_BASKET_ID")
     private String basketId;
 
+    @CSVField(header = "Long Short")
     private String longShort;
 
+    @CSVField(header = "Quantity")
     private String quantity;
 
     public String getLiquidationKey() {
