@@ -6,7 +6,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 @FieldOrder({
         "book", "productType", "productSubType",
         "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
-        "payRec", "settlementDate", "settlementType", "fixedFloat",
+        "payRec", "cashFlowType", "resetDate", "settlementDate", "settlementType", "fixedFloat",
         "rateIndex", "rateIndexTenor", "spread",
         "currency", "notional",
         "rate", "fixedRate", "resetRate", "fwdRate",
@@ -23,6 +23,12 @@ public class TradeCashFlowCalCSVDTO {
 
     @CSVField(header = "Product Sub Type")
     private String productSubType;
+
+    @CSVField(header = "Cash Flow Type")
+    private String cashFlowType;
+
+    @CSVField(header = "Reset Date")
+    private String resetDate;
 
     @CSVField(header = "Fixed or Floating")
     private String fixedFloat;
@@ -278,5 +284,21 @@ public class TradeCashFlowCalCSVDTO {
 
     public void setSettlementDate(String settlementDate) {
         this.settlementDate = settlementDate;
+    }
+
+    public String getCashFlowType() {
+        return cashFlowType;
+    }
+
+    public void setCashFlowType(String cashFlowType) {
+        this.cashFlowType = cashFlowType;
+    }
+
+    public String getResetDate() {
+        return resetDate;
+    }
+
+    public void setResetDate(String resetDate) {
+        this.resetDate = resetDate;
     }
 }
