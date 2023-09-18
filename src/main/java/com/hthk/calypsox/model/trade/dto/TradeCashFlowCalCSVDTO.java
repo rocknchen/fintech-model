@@ -97,6 +97,14 @@ public class TradeCashFlowCalCSVDTO {
     @CSVField(header = "Settlement Date")
     private String settlementDate;
 
+    public String getTradeStatus() {
+        return tradeStatus;
+    }
+
+    public void setTradeStatus(String tradeStatus) {
+        this.tradeStatus = tradeStatus;
+    }
+
     public String getRate() {
         return rate;
     }
