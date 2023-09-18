@@ -7,7 +7,8 @@ import com.hthk.fintech.enumration.FieldOrder;
         "book", "productType", "productSubType",
         "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
         "tradeStatus",
-        "payRec", "settlementType", "cashFlowType", "fixedFloat", "resetDate", "settlementDate",
+        "payRec", "settlementType", "cashFlowType", "paymentFrequency",
+        "fixedFloat", "resetDate", "settlementDate",
         "rateIndex", "rateIndexTenor", "spread",
         "currency", "notional",
         "rate", "fixedRate", "resetRate", "fwdRate",
@@ -28,6 +29,9 @@ public class TradeCashFlowCalCSVDTO {
 
     @CSVField(header = "Cash Flow Type")
     private String cashFlowType;
+
+    @CSVField(header = "Payment Frequency")
+    private String paymentFrequency;
 
     @CSVField(header = "Libor Reform Recon.Settle Date")
     private String settleDateReconStatus;
@@ -100,6 +104,14 @@ public class TradeCashFlowCalCSVDTO {
 
     @CSVField(header = "Settlement Date")
     private String settlementDate;
+
+    public String getPaymentFrequency() {
+        return paymentFrequency;
+    }
+
+    public void setPaymentFrequency(String paymentFrequency) {
+        this.paymentFrequency = paymentFrequency;
+    }
 
     public String getSettleDateReconStatus() {
         return settleDateReconStatus;
