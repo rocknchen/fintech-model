@@ -6,7 +6,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 @FieldOrder({
         "book", "productType", "productSubType",
         "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
-        "payRec", "cashFlowType", "resetDate", "settlementDate", "settlementType", "fixedFloat",
+        "payRec", "settlementType", "cashFlowType", "fixedFloat", "resetDate", "settlementDate",
         "rateIndex", "rateIndexTenor", "spread",
         "currency", "notional",
         "rate", "fixedRate", "resetRate", "fwdRate",
