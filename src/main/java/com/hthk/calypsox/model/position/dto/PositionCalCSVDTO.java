@@ -7,7 +7,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "liquidationKey",
         "liquidationMethod",
         "book", "product", "basketId",
-        "positionId",
+        "positionId", "productCUSIP", "productISIN", "productQuoteName",
         "longShort", "quantity", "quantityBreakDown"
 })
 public class PositionCalCSVDTO {
@@ -21,8 +21,20 @@ public class PositionCalCSVDTO {
     @CSVField(header = "Book")
     private String book;
 
-    @CSVField(header = "Product")
+    @CSVField(header = "Product Name")
     private String product;
+
+    @CSVField(header = "Product.ID")
+    private String productId;
+
+    @CSVField(header = "Product.CUSIP")
+    private String productCUSIP;
+
+    @CSVField(header = "Product.ISIN")
+    private String productISIN;
+
+    @CSVField(header = "Product.Quote Name")
+    private String productQuoteName;
 
     @CSVField(header = "TRS_BASKET_ID")
     private String basketId;
@@ -38,6 +50,38 @@ public class PositionCalCSVDTO {
 
     @CSVField(header = "BreakDown.Quantity")
     private String quantityBreakDown;
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getProductCUSIP() {
+        return productCUSIP;
+    }
+
+    public void setProductCUSIP(String productCUSIP) {
+        this.productCUSIP = productCUSIP;
+    }
+
+    public String getProductISIN() {
+        return productISIN;
+    }
+
+    public void setProductISIN(String productISIN) {
+        this.productISIN = productISIN;
+    }
+
+    public String getProductQuoteName() {
+        return productQuoteName;
+    }
+
+    public void setProductQuoteName(String productQuoteName) {
+        this.productQuoteName = productQuoteName;
+    }
 
     public String getLiquidationKey() {
         return liquidationKey;
