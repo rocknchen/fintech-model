@@ -7,7 +7,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "date", "quoteName", "quoteType",
         "bid", "ask", "open", "close", "high", "low", "last",
         "enteredDate", "enteredUser",
-        "sourceName"
+        "sourceName", "version"
 })
 public class QuoteCalCSVDTO {
 
@@ -49,6 +49,17 @@ public class QuoteCalCSVDTO {
 
     @CSVField(header = "Source Name")
     private String sourceName;
+
+    @CSVField(header = "Version")
+    private String version;
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
 
     public String getDate() {
         return date;
