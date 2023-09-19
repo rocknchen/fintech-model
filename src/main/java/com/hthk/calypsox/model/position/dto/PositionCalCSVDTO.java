@@ -7,7 +7,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "liquidationKey",
         "liquidationMethod",
         "book", "product", "basketId",
-        "longShort", "quantity"
+        "longShort", "quantity", "quantityBreakDown"
 })
 public class PositionCalCSVDTO {
 
@@ -31,6 +31,9 @@ public class PositionCalCSVDTO {
 
     @CSVField(header = "Quantity")
     private String quantity;
+
+    @CSVField(header = "BreakDown.Quantity")
+    private String quantityBreakDown;
 
     public String getLiquidationKey() {
         return liquidationKey;
@@ -88,4 +91,11 @@ public class PositionCalCSVDTO {
         this.quantity = quantity;
     }
 
+    public String getQuantityBreakDown() {
+        return quantityBreakDown;
+    }
+
+    public void setQuantityBreakDown(String quantityBreakDown) {
+        this.quantityBreakDown = quantityBreakDown;
+    }
 }
