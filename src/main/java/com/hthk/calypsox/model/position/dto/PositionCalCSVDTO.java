@@ -7,7 +7,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "liquidationKey",
         "liquidationMethod",
         "book", "product", "basketId",
-        "positionId", "productCUSIP", "productISIN", "productQuoteName",
+        "positionId", "productId", "productCUSIP", "productISIN", "productQuoteName",
         "longShort", "quantity", "quantityBreakDown"
 })
 public class PositionCalCSVDTO {
