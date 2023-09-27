@@ -12,7 +12,8 @@ import com.hthk.fintech.enumration.FieldOrder;
         "premiumCurrency", "premiumAmount", "premiumDate",
         "deliveryDate",
         "fxBaseCurrency", "fxBaseAmount", "fxBaseSettlementDate",
-        "fxQuoteCurrency", "fxQuoteAmount", "fxQuoteSettlementDate"
+        "fxQuoteCurrency", "fxQuoteAmount", "fxQuoteSettlementDate",
+        "tkTradeIdLink"
 })
 public class TradeCSVDTO {
 
@@ -114,6 +115,17 @@ public class TradeCSVDTO {
 
     @CSVField(header = "FX Quote Settlement Date")
     private String fxQuoteSettlementDate;
+
+    @CSVField(header = "TK.TRADE_ID_LINK")
+    private String tkTradeIdLink;
+
+    public String getTkTradeIdLink() {
+        return tkTradeIdLink;
+    }
+
+    public void setTkTradeIdLink(String tkTradeIdLink) {
+        this.tkTradeIdLink = tkTradeIdLink;
+    }
 
     public String getPremiumCurrency() {
         return premiumCurrency;
