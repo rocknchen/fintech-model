@@ -3,7 +3,8 @@ package com.hthk.fintech.model.trade.dto;
 import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
-@FieldOrder({"bookName", "counterParty", "productType", "productSubType",
+@FieldOrder({"bookName", "counterParty", "counterPartyFullName",
+        "productType", "productSubType",
         "tradeId", "externalReference", "internalReference", "buySell",
         "tradeDateTime", "updatedDateTime", "tradeStatus",
         "trader", "enteredUser", "enteredDateTime",
@@ -22,6 +23,9 @@ public class TradeCSVDTO {
 
     @CSVField(header = "Counter Party")
     private String counterParty;
+
+    @CSVField(header = "Counter Party Full Name")
+    private String counterPartyFullName;
 
     @CSVField(header = "Product Type")
     private String productType;
@@ -118,6 +122,14 @@ public class TradeCSVDTO {
 
     @CSVField(header = "TK.TRADE_ID_LINK")
     private String tkTradeIdLink;
+
+    public String getCounterPartyFullName() {
+        return counterPartyFullName;
+    }
+
+    public void setCounterPartyFullName(String counterPartyFullName) {
+        this.counterPartyFullName = counterPartyFullName;
+    }
 
     public String getTkTradeIdLink() {
         return tkTradeIdLink;
