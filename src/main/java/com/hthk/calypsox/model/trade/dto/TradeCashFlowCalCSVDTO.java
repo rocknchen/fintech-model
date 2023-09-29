@@ -6,6 +6,7 @@ import com.hthk.fintech.enumration.FieldOrder;
 @FieldOrder({
         "book", "productType", "productSubType",
         "origTradeId", "tradeId", "tradeKeywordTradeIdLink",
+        "tradeKeywordLiborBackup",
         "tradeStatus",
         "payRec", "settlementType", "cashFlowType", "paymentFrequency",
         "fixedFloat", "resetDate", "settlementDate",
@@ -84,6 +85,9 @@ public class TradeCashFlowCalCSVDTO {
     @CSVField(header = "Trade Keyword TRADE_ID_LINK")
     private String tradeKeywordTradeIdLink;
 
+    @CSVField(header = "Trade Keyword LIBOR_BACKUP")
+    private String tradeKeywordLiborBackup;
+
     @CSVField(header = "Settlement Type")
     private String settlementType;
 
@@ -116,6 +120,14 @@ public class TradeCashFlowCalCSVDTO {
 
     @CSVField(header = "Settlement Date")
     private String settlementDate;
+
+    public String getTradeKeywordLiborBackup() {
+        return tradeKeywordLiborBackup;
+    }
+
+    public void setTradeKeywordLiborBackup(String tradeKeywordLiborBackup) {
+        this.tradeKeywordLiborBackup = tradeKeywordLiborBackup;
+    }
 
     public String getPaymentFrequency() {
         return paymentFrequency;
