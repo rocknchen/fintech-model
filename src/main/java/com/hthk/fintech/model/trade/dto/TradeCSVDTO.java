@@ -1,130 +1,187 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.hthk.fintech.model.trade.dto;
 
 import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
-@FieldOrder({"bookName", "counterParty", "counterPartyFullName",
-        "productType", "productSubType",
-        "tradeId", "externalReference", "internalReference", "buySell",
-        "tradeDateTime", "updatedDateTime", "tradeStatus",
-        "trader", "enteredUser", "enteredDateTime",
-        "tradeVersion", "exerciseType", "settleType", "expiryDate", "optionExpiryCut",
+@FieldOrder({"bookName", "counterParty",
+        "counterPartyFullName", "productType", "productSubType",
+        "tradeId", "externalReference", "internalReference",
+        "buySell", "tradeDateTime", "updatedDateTime", "tradeStatus",
+        "trader", "enteredUser", "enteredDateTime", "tradeVersion",
+        "exerciseType", "settleType", "expiryDate", "optionExpiryCut",
         "currencyPair", "principalAmount", "callPut", "strike",
         "premiumCurrency", "premiumAmount", "premiumDate",
-        "deliveryDate",
-        "fxBaseCurrency", "fxBaseAmount", "fxBaseSettlementDate",
-        "fxQuoteCurrency", "fxQuoteAmount", "fxQuoteSettlementDate",
-        "tkTradeIdLink"
+        "deliveryDate", "fxBaseCurrency", "fxBaseAmount", "fxBaseSettlementDate",
+        "fxQuoteCurrency", "fxQuoteAmount",
+        "fxQuoteSettlementDate", "tkTradeIdLink", "tkLiborBackup"
 })
 public class TradeCSVDTO {
-
-    @CSVField(header = "Book")
+    @CSVField(
+            header = "Book"
+    )
     private String bookName;
-
-    @CSVField(header = "Counter Party")
+    @CSVField(
+            header = "Counter Party"
+    )
     private String counterParty;
-
-    @CSVField(header = "Counter Party Full Name")
+    @CSVField(
+            header = "Counter Party Full Name"
+    )
     private String counterPartyFullName;
-
-    @CSVField(header = "Product Type")
+    @CSVField(
+            header = "Product Type"
+    )
     private String productType;
-
-    @CSVField(header = "Product Subtype")
+    @CSVField(
+            header = "Product Subtype"
+    )
     private String productSubType;
-
-    @CSVField(header = "Trade Id")
+    @CSVField(
+            header = "Trade Id"
+    )
     private String tradeId;
-
-    @CSVField(header = "External Reference")
+    @CSVField(
+            header = "External Reference"
+    )
     private String externalReference;
-
-    @CSVField(header = "Internal Reference")
+    @CSVField(
+            header = "Internal Reference"
+    )
     private String internalReference;
-
-    @CSVField(header = "Buy Sell")
+    @CSVField(
+            header = "Buy Sell"
+    )
     private String buySell;
-
-    @CSVField(header = "Trade Date Time")
+    @CSVField(
+            header = "Trade Date Time"
+    )
     private String tradeDateTime;
-
-    @CSVField(header = "Updated Date Time")
+    @CSVField(
+            header = "Updated Date Time"
+    )
     private String updatedDateTime;
-
-    @CSVField(header = "Trade Status")
+    @CSVField(
+            header = "Trade Status"
+    )
     private String tradeStatus;
-
-    @CSVField(header = "Trader")
+    @CSVField(
+            header = "Trader"
+    )
     private String trader;
-
-    @CSVField(header = "Entered User")
+    @CSVField(
+            header = "Entered User"
+    )
     private String enteredUser;
-
-    @CSVField(header = "Entered Date Time")
+    @CSVField(
+            header = "Entered Date Time"
+    )
     private String enteredDateTime;
-
-    @CSVField(header = "Trade Version")
+    @CSVField(
+            header = "Trade Version"
+    )
     private String tradeVersion;
-
-    @CSVField(header = "Exercise Type")
+    @CSVField(
+            header = "Exercise Type"
+    )
     private String exerciseType;
-
-    @CSVField(header = "Settle Type")
+    @CSVField(
+            header = "Settle Type"
+    )
     private String settleType;
-
-    @CSVField(header = "Expiry Date")
+    @CSVField(
+            header = "Expiry Date"
+    )
     private String expiryDate;
-
-    @CSVField(header = "Option Expiry Cut")
+    @CSVField(
+            header = "Option Expiry Cut"
+    )
     private String optionExpiryCut;
-
-    @CSVField(header = "Currency Pair")
+    @CSVField(
+            header = "Currency Pair"
+    )
     private String currencyPair;
-
-    @CSVField(header = "Principal Amount")
+    @CSVField(
+            header = "Principal Amount"
+    )
     private String principalAmount;
-
-    @CSVField(header = "callPut")
+    @CSVField(
+            header = "callPut"
+    )
     private String callPut;
-
-    @CSVField(header = "strike")
+    @CSVField(
+            header = "strike"
+    )
     private String strike;
-
-    @CSVField(header = "Premium Currency")
+    @CSVField(
+            header = "Premium Currency"
+    )
     private String premiumCurrency;
-
-    @CSVField(header = "Premium Amount")
+    @CSVField(
+            header = "Premium Amount"
+    )
     private String premiumAmount;
-
-    @CSVField(header = "Premium Date")
+    @CSVField(
+            header = "Premium Date"
+    )
     private String premiumDate;
-
-    @CSVField(header = "Delivery Date")
+    @CSVField(
+            header = "Delivery Date"
+    )
     private String deliveryDate;
-
-    @CSVField(header = "FX Base Currency")
+    @CSVField(
+            header = "FX Base Currency"
+    )
     private String fxBaseCurrency;
-
-    @CSVField(header = "FX Base Amount")
+    @CSVField(
+            header = "FX Base Amount"
+    )
     private String fxBaseAmount;
-
-    @CSVField(header = "FX Base Settlement Date")
+    @CSVField(
+            header = "FX Base Settlement Date"
+    )
     private String fxBaseSettlementDate;
-
-    @CSVField(header = "FX Quote Currency")
+    @CSVField(
+            header = "FX Quote Currency"
+    )
     private String fxQuoteCurrency;
-
-    @CSVField(header = "FX Quote Amount")
+    @CSVField(
+            header = "FX Quote Amount"
+    )
     private String fxQuoteAmount;
-
-    @CSVField(header = "FX Quote Settlement Date")
+    @CSVField(
+            header = "FX Quote Settlement Date"
+    )
     private String fxQuoteSettlementDate;
-
-    @CSVField(header = "TK.TRADE_ID_LINK")
+    @CSVField(
+            header = "TK.TRADE_ID_LINK"
+    )
     private String tkTradeIdLink;
 
+    @CSVField(
+            header = "TK.LIBOR_BACKUP"
+    )
+    private String tkLiborBackup;
+
+    private String leg1Direction;
+
+    public TradeCSVDTO() {
+    }
+
+    public String getTkLiborBackup() {
+        return tkLiborBackup;
+    }
+
+    public void setTkLiborBackup(String tkLiborBackup) {
+        this.tkLiborBackup = tkLiborBackup;
+    }
+
     public String getCounterPartyFullName() {
-        return counterPartyFullName;
+        return this.counterPartyFullName;
     }
 
     public void setCounterPartyFullName(String counterPartyFullName) {
@@ -132,7 +189,7 @@ public class TradeCSVDTO {
     }
 
     public String getTkTradeIdLink() {
-        return tkTradeIdLink;
+        return this.tkTradeIdLink;
     }
 
     public void setTkTradeIdLink(String tkTradeIdLink) {
@@ -140,7 +197,7 @@ public class TradeCSVDTO {
     }
 
     public String getPremiumCurrency() {
-        return premiumCurrency;
+        return this.premiumCurrency;
     }
 
     public void setPremiumCurrency(String premiumCurrency) {
@@ -148,7 +205,7 @@ public class TradeCSVDTO {
     }
 
     public String getBuySell() {
-        return buySell;
+        return this.buySell;
     }
 
     public void setBuySell(String buySell) {
@@ -156,7 +213,7 @@ public class TradeCSVDTO {
     }
 
     public String getTradeDateTime() {
-        return tradeDateTime;
+        return this.tradeDateTime;
     }
 
     public void setTradeDateTime(String tradeDateTime) {
@@ -164,7 +221,7 @@ public class TradeCSVDTO {
     }
 
     public String getUpdatedDateTime() {
-        return updatedDateTime;
+        return this.updatedDateTime;
     }
 
     public void setUpdatedDateTime(String updatedDateTime) {
@@ -172,7 +229,7 @@ public class TradeCSVDTO {
     }
 
     public String getTradeStatus() {
-        return tradeStatus;
+        return this.tradeStatus;
     }
 
     public void setTradeStatus(String tradeStatus) {
@@ -180,7 +237,7 @@ public class TradeCSVDTO {
     }
 
     public String getTrader() {
-        return trader;
+        return this.trader;
     }
 
     public void setTrader(String trader) {
@@ -188,7 +245,7 @@ public class TradeCSVDTO {
     }
 
     public String getEnteredUser() {
-        return enteredUser;
+        return this.enteredUser;
     }
 
     public void setEnteredUser(String enteredUser) {
@@ -196,7 +253,7 @@ public class TradeCSVDTO {
     }
 
     public String getEnteredDateTime() {
-        return enteredDateTime;
+        return this.enteredDateTime;
     }
 
     public void setEnteredDateTime(String enteredDateTime) {
@@ -204,7 +261,7 @@ public class TradeCSVDTO {
     }
 
     public String getTradeVersion() {
-        return tradeVersion;
+        return this.tradeVersion;
     }
 
     public void setTradeVersion(String tradeVersion) {
@@ -212,7 +269,7 @@ public class TradeCSVDTO {
     }
 
     public String getExerciseType() {
-        return exerciseType;
+        return this.exerciseType;
     }
 
     public void setExerciseType(String exerciseType) {
@@ -220,7 +277,7 @@ public class TradeCSVDTO {
     }
 
     public String getSettleType() {
-        return settleType;
+        return this.settleType;
     }
 
     public void setSettleType(String settleType) {
@@ -228,7 +285,7 @@ public class TradeCSVDTO {
     }
 
     public String getExpiryDate() {
-        return expiryDate;
+        return this.expiryDate;
     }
 
     public void setExpiryDate(String expiryDate) {
@@ -236,7 +293,7 @@ public class TradeCSVDTO {
     }
 
     public String getOptionExpiryCut() {
-        return optionExpiryCut;
+        return this.optionExpiryCut;
     }
 
     public void setOptionExpiryCut(String optionExpiryCut) {
@@ -244,7 +301,7 @@ public class TradeCSVDTO {
     }
 
     public String getCurrencyPair() {
-        return currencyPair;
+        return this.currencyPair;
     }
 
     public void setCurrencyPair(String currencyPair) {
@@ -252,7 +309,7 @@ public class TradeCSVDTO {
     }
 
     public String getPrincipalAmount() {
-        return principalAmount;
+        return this.principalAmount;
     }
 
     public void setPrincipalAmount(String principalAmount) {
@@ -260,7 +317,7 @@ public class TradeCSVDTO {
     }
 
     public String getCallPut() {
-        return callPut;
+        return this.callPut;
     }
 
     public void setCallPut(String callPut) {
@@ -268,7 +325,7 @@ public class TradeCSVDTO {
     }
 
     public String getStrike() {
-        return strike;
+        return this.strike;
     }
 
     public void setStrike(String strike) {
@@ -276,7 +333,7 @@ public class TradeCSVDTO {
     }
 
     public String getPremiumAmount() {
-        return premiumAmount;
+        return this.premiumAmount;
     }
 
     public void setPremiumAmount(String premiumAmount) {
@@ -284,7 +341,7 @@ public class TradeCSVDTO {
     }
 
     public String getPremiumDate() {
-        return premiumDate;
+        return this.premiumDate;
     }
 
     public void setPremiumDate(String premiumDate) {
@@ -292,7 +349,7 @@ public class TradeCSVDTO {
     }
 
     public String getDeliveryDate() {
-        return deliveryDate;
+        return this.deliveryDate;
     }
 
     public void setDeliveryDate(String deliveryDate) {
@@ -300,7 +357,7 @@ public class TradeCSVDTO {
     }
 
     public String getCounterParty() {
-        return counterParty;
+        return this.counterParty;
     }
 
     public void setCounterParty(String counterParty) {
@@ -308,7 +365,7 @@ public class TradeCSVDTO {
     }
 
     public String getProductType() {
-        return productType;
+        return this.productType;
     }
 
     public void setProductType(String productType) {
@@ -316,7 +373,7 @@ public class TradeCSVDTO {
     }
 
     public String getProductSubType() {
-        return productSubType;
+        return this.productSubType;
     }
 
     public void setProductSubType(String productSubType) {
@@ -324,7 +381,7 @@ public class TradeCSVDTO {
     }
 
     public String getBookName() {
-        return bookName;
+        return this.bookName;
     }
 
     public void setBookName(String bookName) {
@@ -332,7 +389,7 @@ public class TradeCSVDTO {
     }
 
     public String getExternalReference() {
-        return externalReference;
+        return this.externalReference;
     }
 
     public void setExternalReference(String externalReference) {
@@ -340,7 +397,7 @@ public class TradeCSVDTO {
     }
 
     public String getInternalReference() {
-        return internalReference;
+        return this.internalReference;
     }
 
     public void setInternalReference(String internalReference) {
@@ -348,7 +405,7 @@ public class TradeCSVDTO {
     }
 
     public String getTradeId() {
-        return tradeId;
+        return this.tradeId;
     }
 
     public void setTradeId(String tradeId) {
@@ -356,7 +413,7 @@ public class TradeCSVDTO {
     }
 
     public String getFxBaseCurrency() {
-        return fxBaseCurrency;
+        return this.fxBaseCurrency;
     }
 
     public void setFxBaseCurrency(String fxBaseCurrency) {
@@ -364,7 +421,7 @@ public class TradeCSVDTO {
     }
 
     public String getFxBaseAmount() {
-        return fxBaseAmount;
+        return this.fxBaseAmount;
     }
 
     public void setFxBaseAmount(String fxBaseAmount) {
@@ -372,7 +429,7 @@ public class TradeCSVDTO {
     }
 
     public String getFxBaseSettlementDate() {
-        return fxBaseSettlementDate;
+        return this.fxBaseSettlementDate;
     }
 
     public void setFxBaseSettlementDate(String fxBaseSettlementDate) {
@@ -380,7 +437,7 @@ public class TradeCSVDTO {
     }
 
     public String getFxQuoteCurrency() {
-        return fxQuoteCurrency;
+        return this.fxQuoteCurrency;
     }
 
     public void setFxQuoteCurrency(String fxQuoteCurrency) {
@@ -388,7 +445,7 @@ public class TradeCSVDTO {
     }
 
     public String getFxQuoteAmount() {
-        return fxQuoteAmount;
+        return this.fxQuoteAmount;
     }
 
     public void setFxQuoteAmount(String fxQuoteAmount) {
@@ -396,11 +453,10 @@ public class TradeCSVDTO {
     }
 
     public String getFxQuoteSettlementDate() {
-        return fxQuoteSettlementDate;
+        return this.fxQuoteSettlementDate;
     }
 
     public void setFxQuoteSettlementDate(String fxQuoteSettlementDate) {
         this.fxQuoteSettlementDate = fxQuoteSettlementDate;
     }
-
 }
