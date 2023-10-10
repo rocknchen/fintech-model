@@ -167,7 +167,18 @@ public class TradeCSVDTO {
     )
     private String tkLiborBackup;
 
+    @CSVField(
+            header = "Leg1 Direction"
+    )
     private String leg1Direction;
+
+    public String getLeg1Direction() {
+        return leg1Direction;
+    }
+
+    public void setLeg1Direction(String leg1Direction) {
+        this.leg1Direction = leg1Direction;
+    }
 
     public TradeCSVDTO() {
     }
