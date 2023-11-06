@@ -19,6 +19,7 @@ import com.hthk.fintech.enumration.FieldOrder;
         "deliveryDate", "fxBaseCurrency", "fxBaseAmount", "fxBaseSettlementDate",
         "fxQuoteCurrency", "fxQuoteAmount",
         "fxQuoteSettlementDate", "tkTradeIdLink", "tkLiborBackup"
+        , "tkHtsTRSBasketID"
 })
 public class TradeCSVDTO {
     @CSVField(
@@ -171,6 +172,19 @@ public class TradeCSVDTO {
             header = "Leg1 Direction"
     )
     private String leg1Direction;
+
+    @CSVField(
+            header = "TK.HTS_TRS_BASKET_ID"
+    )
+    private String tkHtsTRSBasketID;
+
+    public String getTkHtsTRSBasketID() {
+        return tkHtsTRSBasketID;
+    }
+
+    public void setTkHtsTRSBasketID(String tkHtsTRSBasketID) {
+        this.tkHtsTRSBasketID = tkHtsTRSBasketID;
+    }
 
     public String getLeg1Direction() {
         return leg1Direction;
