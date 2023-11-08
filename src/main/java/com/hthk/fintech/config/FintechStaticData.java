@@ -9,6 +9,8 @@ public class FintechStaticData {
 
     public static final String DOMAIN_CALYPSO = "CALYPSO";
 
+    public static final String DEFAULT_CLASS_PATH = "fintech";
+
     public static String CHARSET_GBK = "GBK";
 
     public static String CHARSET_GB2312 = "GB2312";
