@@ -1,16 +1,18 @@
 package com.hthk.fintech.model.web.http;
 
+import com.hthk.fintech.model.data.datacenter.query.DataQueryRequest;
+import com.hthk.fintech.model.data.datacenter.query.IDataCriteria;
 import com.hthk.fintech.model.software.app.Application;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2023/11/14 14:15
  */
-public class HttpRequest<T> {
+public class HttpRequest<T extends IDataCriteria> {
 
     private Application source;
 
-    private T data;
+    private DataQueryRequest<T> data;
 
     public HttpRequest() {
     }
@@ -19,7 +21,7 @@ public class HttpRequest<T> {
         this.source = source;
     }
 
-    public HttpRequest(Application source, T data) {
+    public HttpRequest(Application source, DataQueryRequest<T> data) {
         this.source = source;
         this.data = data;
     }
@@ -32,12 +34,11 @@ public class HttpRequest<T> {
         this.source = source;
     }
 
-    public T getData() {
+    public DataQueryRequest<T> getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public void setData(DataQueryRequest<T> data) {
         this.data = data;
     }
-
 }

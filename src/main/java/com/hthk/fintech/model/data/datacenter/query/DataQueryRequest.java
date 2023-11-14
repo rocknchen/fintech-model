@@ -4,7 +4,7 @@ package com.hthk.fintech.model.data.datacenter.query;
  * @Author: Rock CHEN
  * @Date: 2023/11/14 19:20
  */
-public class DataQueryRequest<T> {
+public class DataQueryRequest<T extends IDataCriteria> {
 
     private EntityCriteria entity;
 
