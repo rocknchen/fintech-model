@@ -6,7 +6,7 @@ package com.hthk.fintech.model.software.app;
  */
 public class Application {
 
-    private String name;
+    private ApplicationEnum name;
 
     private AppVersion appVersion;
 
@@ -15,11 +15,11 @@ public class Application {
     public Application() {
     }
 
-    public String getName() {
+    public ApplicationEnum getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(ApplicationEnum name) {
         this.name = name;
     }
 
