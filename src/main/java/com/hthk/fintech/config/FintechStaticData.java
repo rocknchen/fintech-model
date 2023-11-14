@@ -66,4 +66,10 @@ public class FintechStaticData {
 
     public static final List<String> EMAIL_CC_TEST_LIST = Arrays.asList(ROCK_PERSONAL_EMAIL);
 
+    public static final String KW_APP_VERSION = "appVersion";
+
+    public static final String KW_HTTP_REQUEST = "httpRequest";
+
+    public static final String LOG_WRAP = "{}:\r\n{}";
+
 }

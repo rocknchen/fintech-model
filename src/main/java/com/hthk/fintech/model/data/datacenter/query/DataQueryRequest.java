@@ -1,0 +1,31 @@
+package com.hthk.fintech.model.data.datacenter.query;
+
+/**
+ * @Author: Rock CHEN
+ * @Date: 2023/11/14 19:20
+ */
+public class DataQueryRequest<T> {
+
+    private EntityCriteria entity;
+
+    private T criteria;
+
+    public DataQueryRequest() {
+    }
+
+    public EntityCriteria getEntity() {
+        return entity;
+    }
+
+    public void setEntity(EntityCriteria entity) {
+        this.entity = entity;
+    }
+
+    public T getCriteria() {
+        return criteria;
+    }
+
+    public void setCriteria(T criteria) {
+        this.criteria = criteria;
+    }
+}
