@@ -72,4 +72,6 @@ public class FintechStaticData {
 
     public static final String LOG_WRAP = "{}:\r\n{}";
 
+    public static final String LOG_DEFAULT = "{}: {}";
+
 }
