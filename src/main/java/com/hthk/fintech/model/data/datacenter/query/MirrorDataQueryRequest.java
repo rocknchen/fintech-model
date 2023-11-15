@@ -8,6 +8,8 @@ public class MirrorDataQueryRequest {
 
     private EntityCriteria entity;
 
+    private DataSnapshot snapshot;
+
     private Object criteria;
 
     public void setCriteria(Object criteria) {
@@ -20,5 +22,13 @@ public class MirrorDataQueryRequest {
 
     public void setEntity(EntityCriteria entity) {
         this.entity = entity;
+    }
+
+    public DataSnapshot getSnapshot() {
+        return snapshot;
+    }
+
+    public void setSnapshot(DataSnapshot snapshot) {
+        this.snapshot = snapshot;
     }
 }

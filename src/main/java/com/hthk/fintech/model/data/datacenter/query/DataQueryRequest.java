@@ -30,4 +30,12 @@ public class DataQueryRequest<T extends IDataCriteria> {
     public void setCriteria(T criteria) {
         this.criteria = criteria;
     }
+
+    public DataSnapshot getSnapshot() {
+        return snapshot;
+    }
+
+    public void setSnapshot(DataSnapshot snapshot) {
+        this.snapshot = snapshot;
+    }
 }
