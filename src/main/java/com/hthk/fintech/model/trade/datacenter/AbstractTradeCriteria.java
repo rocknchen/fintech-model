@@ -1,14 +1,12 @@
 package com.hthk.fintech.model.trade.datacenter;
 
-import com.hthk.fintech.model.data.datacenter.query.IDataCriteria;
-
 import java.time.LocalDate;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2023/11/15 12:02
  */
-public abstract class AbstractTradeCriteria implements IDataCriteria {
+public abstract class AbstractTradeCriteria implements IDataCriteriaTrade {
 
     protected LocalDate tradeDate;
 
