@@ -14,4 +14,6 @@ public class DataCenterStaticData {
     public static final List<SnapshotImageEnum> WHITE_LIST_FILE_SUPPORTED_IMAGE_TYPE
             = Arrays.asList(SnapshotImageEnum.LATEST);
 
+    public static final String KW_FOLDER_NAME_TRADE = "TRADE";
+
 }
