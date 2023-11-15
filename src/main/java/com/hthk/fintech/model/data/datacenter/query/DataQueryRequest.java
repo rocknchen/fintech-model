@@ -8,6 +8,8 @@ public class DataQueryRequest<T extends IDataCriteria> {
 
     private EntityCriteria entity;
 
+    private DataSnapshot snapshot;
+
     private T criteria;
 
     public DataQueryRequest() {
