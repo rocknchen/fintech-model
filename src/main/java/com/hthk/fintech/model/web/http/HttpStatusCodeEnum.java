@@ -8,7 +8,9 @@ public enum HttpStatusCodeEnum {
 
     SUCCESS(200, "success"),
 
-    FAIL(400, "fail");
+    FAIL(400, "fail"),
+
+    INTERNAL_ERROR(500, "internal error");
 
     private int statusCode;
 
