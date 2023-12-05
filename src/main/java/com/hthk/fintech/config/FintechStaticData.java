@@ -25,6 +25,8 @@ public class FintechStaticData {
 
     public static final String BASIC_DATE_FORMAT = "yyyyMMdd";
 
+    public static final String BASIC_FILE_NAME_DATE_TIME_FORMAT = "yyyyMMdd_HHmmss";
+
     public static final String DEFAULT_DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMAT_FORMATTER = DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT);
