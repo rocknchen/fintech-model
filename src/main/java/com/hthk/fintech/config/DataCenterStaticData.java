@@ -14,10 +14,10 @@ public class DataCenterStaticData {
     public static final List<SnapshotImageEnum> WHITE_LIST_FILE_SUPPORTED_IMAGE_TYPE
             = Arrays.asList(SnapshotImageEnum.LATEST);
 
-    public static final String KW_FOLDER_NAME_TRADE = "TRADE/dc";
+    public static final String KW_FOLDER_NAME_TRADE = "TRADE";
 
     public static final String KW_FILE_NAME_TRADE = "TRADE";
 
-    public static final String KW_DATACENTER_FILE_NAME_PREFIX = "DATA_CENTER";
+    public static final String KW_DATACENTER_FILE_NAME_PREFIX = "TRADE";
 
 }
