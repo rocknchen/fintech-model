@@ -10,6 +10,14 @@ public class IRequestAction<P> {
 
     private P params;
 
+    public IRequestAction() {
+    }
+
+    public IRequestAction(HttpRequestActionTypeEnum name, P params) {
+        this.name = name;
+        this.params = params;
+    }
+
     public HttpRequestActionTypeEnum getName() {
         return name;
     }

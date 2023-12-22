@@ -11,14 +11,13 @@ import static com.hthk.fintech.model.web.http.HttpRequestActionTypeEnum.GET;
 @HttpRequestParams(name = GET)
 public class HttpRequestGetParams {
 
-    private ApplicationInstance appInstance;
+    private ApplicationInstance source;
 
-    public ApplicationInstance getAppInstance() {
-        return appInstance;
+    public ApplicationInstance getSource() {
+        return source;
     }
 
-    public void setAppInstance(ApplicationInstance appInstance) {
-        this.appInstance = appInstance;
+    public void setSource(ApplicationInstance source) {
+        this.source = source;
     }
-
 }
