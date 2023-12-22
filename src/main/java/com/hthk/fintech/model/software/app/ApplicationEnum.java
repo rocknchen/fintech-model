@@ -6,6 +6,6 @@ package com.hthk.fintech.model.software.app;
  */
 public enum ApplicationEnum {
 
-    CALYPSO;
+    NA, CALYPSO;
 
 }

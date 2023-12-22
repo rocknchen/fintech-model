@@ -2,7 +2,7 @@ package com.hthk.fintech.model.web.http;
 
 import com.hthk.fintech.model.software.app.ApplicationInstance;
 
-import static com.hthk.fintech.model.web.http.HttpRequestActionTypeEnum.GET;
+import static com.hthk.fintech.model.web.http.ActionTypeEnum.GET;
 
 /**
  * @Author: Rock CHEN

@@ -6,23 +6,23 @@ package com.hthk.fintech.model.web.http;
  */
 public class IRequestAction<P> {
 
-    private HttpRequestActionTypeEnum name;
+    private ActionTypeEnum name;
 
     private P params;
 
     public IRequestAction() {
     }
 
-    public IRequestAction(HttpRequestActionTypeEnum name, P params) {
+    public IRequestAction(ActionTypeEnum name, P params) {
         this.name = name;
         this.params = params;
     }
 
-    public HttpRequestActionTypeEnum getName() {
+    public ActionTypeEnum getName() {
         return name;
     }
 
-    public void setName(HttpRequestActionTypeEnum name) {
+    public void setName(ActionTypeEnum name) {
         this.name = name;
     }
 

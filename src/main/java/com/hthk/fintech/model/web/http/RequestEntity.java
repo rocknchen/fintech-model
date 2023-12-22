@@ -1,12 +1,14 @@
 package com.hthk.fintech.model.web.http;
 
+import com.hthk.fintech.model.data.datacenter.query.EntityTypeEnum;
+
 /**
  * @Author: Rock CHEN
  * @Date: 2023/12/20 16:35
  */
 public class RequestEntity {
 
-    private String type;
+    private EntityTypeEnum type;
 
     private String subType1;
 
@@ -18,11 +20,11 @@ public class RequestEntity {
 
     private String subType5;
 
-    public String getType() {
+    public EntityTypeEnum getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(EntityTypeEnum type) {
         this.type = type;
     }
 
