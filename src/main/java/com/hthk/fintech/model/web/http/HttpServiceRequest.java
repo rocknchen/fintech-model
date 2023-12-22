@@ -17,6 +17,13 @@ public class HttpServiceRequest<P, C> {
     public HttpServiceRequest() {
     }
 
+    public HttpServiceRequest(IRequestAction<P> action, RequestDateTime dateTime, RequestEntity entity, C criteria) {
+        this.action = action;
+        this.dateTime = dateTime;
+        this.entity = entity;
+        this.criteria = criteria;
+    }
+
     public IRequestAction<P> getAction() {
         return action;
     }
