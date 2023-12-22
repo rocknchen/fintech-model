@@ -1,5 +1,6 @@
 package com.hthk.fintech.model.web.http;
 
+import com.hthk.fintech.model.software.app.ApplicationEnum;
 import com.hthk.fintech.model.software.app.ApplicationInstance;
 
 import static com.hthk.fintech.model.web.http.ActionTypeEnum.GET;
@@ -9,7 +10,7 @@ import static com.hthk.fintech.model.web.http.ActionTypeEnum.GET;
  * @Date: 2023/12/21 9:40
  */
 @HttpRequestParams(name = GET)
-public class HttpRequestGetParams {
+public class HttpRequestGetParams implements ApplicationSourceParams {
 
     private ApplicationInstance source;
 
@@ -20,4 +21,10 @@ public class HttpRequestGetParams {
     public void setSource(ApplicationInstance source) {
         this.source = source;
     }
+
+    @Override
+    public ApplicationEnum getApplicationSource() {
+        return source.getName();
+    }
+
 }
