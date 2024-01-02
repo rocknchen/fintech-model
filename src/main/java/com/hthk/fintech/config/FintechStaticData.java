@@ -78,4 +78,6 @@ public class FintechStaticData {
 
     public static final String LOG_DEFAULT = "{}: {}";
 
+    public static final String KEY_WORD_NA = "NA";
+
 }
