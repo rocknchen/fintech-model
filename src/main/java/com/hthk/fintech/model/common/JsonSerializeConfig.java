@@ -15,8 +15,4 @@ public @interface JsonSerializeConfig {
 
     Class<?> target();
 
-    String[] ignoreFields() default "";
-
-    String[] ignoreFunctions() default "";
-
 }
