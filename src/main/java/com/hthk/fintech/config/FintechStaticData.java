@@ -2,6 +2,7 @@ package com.hthk.fintech.config;
 
 import com.hthk.fintech.enumration.EventProcessStatusEnum;
 
+import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
@@ -34,6 +35,10 @@ public class FintechStaticData {
     public static final String DEFAULT_DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMAT_FORMATTER = DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT);
+
+    public static final DateTimeFormatter DEFAULT_DATE_FORMAT_FORMATTER = DateTimeFormatter.ofPattern(BASIC_DATE_FORMAT);
+
+    public static final SimpleDateFormat DEFAULT_DATE_FORMAT_SDF = new SimpleDateFormat(BASIC_DATE_FORMAT);
 
     public static final String SIMPLE_DATE_TIME_FORMAT = "yyyyMMdd_HHmmss";
 
