@@ -15,6 +15,10 @@ public class FintechStaticData {
 
     public static String CHARSET_GB2312 = "GB2312";
 
+    public static String KW_HTTP_CONTENT_TYPE = "Content-Type";
+
+    public static String KW_HTTP_CONTENT_TYPE_JSON_UTF8 = "application/json;charset=UTF-8";
+
     public static String DEFAULT_FILE_CHARSET_NAME = "utf-8";
 
     public static final String DEFAULT_PACKAGE = "com.hthk";
