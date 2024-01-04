@@ -55,4 +55,15 @@ public class RequestDateTime {
     public void setTime(String time) {
         this.time = time;
     }
+
+    @Override
+    public String toString() {
+        return "RequestDateTime{" +
+                "runTimeZone='" + runTimeZone + '\'' +
+                ", runDateTime='" + runDateTime + '\'' +
+                ", timeZone='" + timeZone + '\'' +
+                ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                '}';
+    }
 }
