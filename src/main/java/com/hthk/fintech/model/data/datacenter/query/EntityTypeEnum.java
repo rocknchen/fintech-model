@@ -6,7 +6,7 @@ package com.hthk.fintech.model.data.datacenter.query;
  */
 public enum EntityTypeEnum {
 
-    TRADE, TRADE_COUNT,
+    TRADE,
 
     EOD_QUOTE;
 
