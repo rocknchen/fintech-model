@@ -3,13 +3,14 @@ package com.hthk.fintech.model.web.http;
 import com.hthk.fintech.model.software.app.ApplicationEnum;
 import com.hthk.fintech.model.software.app.ApplicationInstance;
 
+import static com.hthk.fintech.model.web.http.ActionTypeEnum.COUNT;
 import static com.hthk.fintech.model.web.http.ActionTypeEnum.GET;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2023/12/21 9:40
  */
-@HttpRequestParams(name = GET)
+@HttpRequestParams(names = {GET, COUNT})
 public class HttpRequestGetParams implements ApplicationSourceParams {
 
     private ApplicationInstance source;

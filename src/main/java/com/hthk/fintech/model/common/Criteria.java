@@ -17,7 +17,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 public @interface Criteria {
 
-    ActionTypeEnum action();
+    ActionTypeEnum[] actions();
 
     EntityTypeEnum type();
 
