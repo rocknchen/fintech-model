@@ -40,6 +40,8 @@ public class FintechStaticData {
 
     public static final SimpleDateFormat DEFAULT_DATE_FORMAT_SDF = new SimpleDateFormat(BASIC_DATE_FORMAT);
 
+    public static final SimpleDateFormat ISO_DATE_FORMAT_SDF = new SimpleDateFormat(DEFAULT_DATE_FORMAT);
+
     public static final SimpleDateFormat DEFAULT_DATE_TIME_FORMAT_SDF = new SimpleDateFormat(DEFAULT_DATE_TIME_FORMAT);
 
     public static final String SIMPLE_DATE_TIME_FORMAT = "yyyyMMdd_HHmmss";
