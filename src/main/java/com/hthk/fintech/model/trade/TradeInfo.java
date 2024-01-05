@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/5 16:31
  */
+//@JsonPropertyOrder({"book", "externalReference", "internalReference", "tradeId", "productType", "productSubType", "productExtType", "tradeDateTime", "settlementDate", "trader"})
 @FieldOrder({"book", "externalReference", "internalReference", "tradeId", "productType", "productSubType", "productExtType", "tradeDateTime", "settlementDate", "trader"})
 public class TradeInfo {
 
