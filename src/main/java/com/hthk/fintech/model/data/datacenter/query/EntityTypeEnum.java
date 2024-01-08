@@ -8,6 +8,8 @@ public enum EntityTypeEnum {
 
     TRADE,
 
-    EOD_QUOTE;
+    EOD_QUOTE,
+
+    POSITION;
 
 }
