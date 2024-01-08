@@ -9,8 +9,9 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/5 16:31
  */
-//@JsonPropertyOrder({"book", "externalReference", "internalReference", "tradeId", "productType", "productSubType", "productExtType", "tradeDateTime", "settlementDate", "trader"})
-@FieldOrder({"book", "externalReference", "internalReference", "tradeId", "productType", "productSubType", "productExtType", "tradeDateTime", "settlementDate", "trader"})
+@FieldOrder({"book", "tradeId", "externalReference",
+        "internalReference", "productType", "productSubType",
+        "productExtType", "trader", "futureUnderlyingCode"})
 public class TradeInfo {
 
     private String book;
@@ -32,6 +33,19 @@ public class TradeInfo {
     private LocalDate settlementDate;
 
     private String trader;
+
+    /**
+     * FutureFX
+     */
+    private String futureUnderlyingCode;
+
+    public String getFutureUnderlyingCode() {
+        return futureUnderlyingCode;
+    }
+
+    public void setFutureUnderlyingCode(String futureUnderlyingCode) {
+        this.futureUnderlyingCode = futureUnderlyingCode;
+    }
 
     public String getTradeId() {
         return tradeId;
