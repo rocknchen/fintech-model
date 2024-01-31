@@ -11,16 +11,20 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/5 16:31
  */
-@FieldOrder({"book", "tradeId", "externalReference",
-        "internalReference", "productType", "productSubType",
-        "productExtType", "tradeDateTime", "settlementDate",
-        "buySell", "price", "quantity",
-        "tradeStatus", "trader", "enteredUser",
-        "enteredDateTime", "futureUnderlyingTickerExchange", "futureUnderlyingBBTickerExchange"})
+@FieldOrder({"book", "counterParty", "tradeId",
+        "externalReference", "internalReference", "productType",
+        "productSubType", "productExtType", "tradeDateTime",
+        "settlementDate", "buySell", "price",
+        "quantity", "tradeStatus", "trader",
+        "enteredUser", "enteredDateTime", "futureUnderlyingTickerExchange",
+        "futureUnderlyingBBTickerExchange"})
 public class TradeInfo {
 
     @CSVField(header = "book")
     private String book;
+
+    @CSVField(header = "counterParty")
+    private String counterParty;
 
     @CSVField(header = "tradeId")
     private String tradeId;
@@ -75,6 +79,14 @@ public class TradeInfo {
 
     @CSVField(header = "futureUnderlyingBBTickerExchange")
     private String futureUnderlyingBBTickerExchange;
+
+    public String getCounterParty() {
+        return counterParty;
+    }
+
+    public void setCounterParty(String counterParty) {
+        this.counterParty = counterParty;
+    }
 
     public String getBuySell() {
         return buySell;
