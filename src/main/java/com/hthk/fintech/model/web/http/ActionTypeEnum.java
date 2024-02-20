@@ -6,6 +6,6 @@ package com.hthk.fintech.model.web.http;
  */
 public enum ActionTypeEnum {
 
-    GET, COUNT, SYNCHRONIZE, PRICE, COPY_ADD, PROCESS, GENERATE;
+    GET, COUNT, SYNCHRONIZE, PRICE, COPY_ADD, PROCESS, GENERATE, AMEND;
 
 }
