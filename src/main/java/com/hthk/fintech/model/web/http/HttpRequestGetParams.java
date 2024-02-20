@@ -9,7 +9,7 @@ import static com.hthk.fintech.model.web.http.ActionTypeEnum.*;
  * @Author: Rock CHEN
  * @Date: 2023/12/21 9:40
  */
-@HttpRequestParams(names = {GET, COUNT, PRICE, SYNCHRONIZE, COPY_ADD, PROCESS})
+@HttpRequestParams(names = {GET, COUNT, PRICE, SYNCHRONIZE, COPY_ADD, PROCESS, AMEND})
 public class HttpRequestGetParams implements ApplicationSourceParams {
 
     private ApplicationInstance source;
