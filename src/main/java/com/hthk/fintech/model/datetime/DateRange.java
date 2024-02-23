@@ -16,6 +16,14 @@ public class DateRange {
 
     private boolean includeEnd = true;
 
+    public DateRange(LocalDate start, LocalDate end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public DateRange() {
+    }
+
     public LocalDate getStart() {
         return start;
     }
