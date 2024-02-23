@@ -9,7 +9,7 @@ import com.hthk.fintech.enumration.FieldOrder;
  */
 @FieldOrder({"tradeId", "pricingEnv", "valuationDate",
         "valuationTime", "measureName", "value",
-        "errorMessage"})
+        "pricingMode", "errorMessage"})
 public class TradePricingResultInfo {
 
     @CSVField(header = "tradeId")
@@ -30,8 +30,19 @@ public class TradePricingResultInfo {
     @CSVField(header = "value")
     private String value;
 
+    @CSVField(header = "pricingMode")
+    private String pricingMode;
+
     @CSVField(header = "errorMessage")
     private String errorMessage;
+
+    public String getPricingMode() {
+        return pricingMode;
+    }
+
+    public void setPricingMode(String pricingMode) {
+        this.pricingMode = pricingMode;
+    }
 
     public String getErrorMessage() {
         return errorMessage;
