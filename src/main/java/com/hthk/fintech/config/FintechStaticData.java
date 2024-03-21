@@ -24,6 +24,8 @@ public class FintechStaticData {
 
     public static final String DEFAULT_PACKAGE = "com.hthk";
 
+    public static final String DEFAULT_APP_INFO_FILE = "fintech/application.yml";
+
     public static final String DEFAULT_APP_CONTEXT_FILE = "fintech/context-local.xml";
 
     public static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";
@@ -92,5 +94,7 @@ public class FintechStaticData {
     public static final String LOG_DEFAULT = "{}: {}";
 
     public static final String KEY_WORD_NA = "NA";
+
+    public static final String KW_NOT_SUPPORTED = "Not Supported";
 
 }
