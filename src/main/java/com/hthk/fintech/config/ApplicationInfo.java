@@ -14,9 +14,9 @@ public class ApplicationInfo {
 
     private List<FTPSource> ftpSourceList;
 
-    private List<SyncInfo> ftpSyncList;
-
     private RemoteSource remoteSource;
+
+    private List<SyncInfo> ftpSyncList;
 
     public List<FTPSource> getFtpSourceList() {
         return ftpSourceList;
