@@ -1,6 +1,7 @@
 package com.hthk.fintech.model.net.ftp;
 
 import com.hthk.fintech.enumration.FTPTypeEnum;
+import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.Session;
 import org.apache.commons.net.ftp.FTPClient;
 
@@ -18,6 +19,16 @@ public class FTPConnection {
     private FTPClient ftpClient;
 
     private Session session;
+
+    private ChannelSftp chSftp;
+
+    public ChannelSftp getChSftp() {
+        return chSftp;
+    }
+
+    public void setChSftp(ChannelSftp chSftp) {
+        this.chSftp = chSftp;
+    }
 
     public FTPConnection() {
     }
