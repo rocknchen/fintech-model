@@ -12,6 +12,26 @@ public class SyncInfo {
 
     private String backup;
 
+    private Boolean sendEmail;
+
+    private String subject;
+
+    public Boolean getSendEmail() {
+        return sendEmail;
+    }
+
+    public void setSendEmail(Boolean sendEmail) {
+        this.sendEmail = sendEmail;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
     public boolean isBackup() {
         return backup != null;
     }
