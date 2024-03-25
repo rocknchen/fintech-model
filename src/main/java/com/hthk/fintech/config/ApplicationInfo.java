@@ -1,6 +1,7 @@
 package com.hthk.fintech.config;
 
 import com.hthk.fintech.model.net.ftp.FTPSource;
+import com.hthk.fintech.model.net.network.EmailInfo;
 import com.hthk.fintech.model.net.network.RemoteSource;
 import com.hthk.fintech.model.net.network.SyncInfo;
 
@@ -17,6 +18,16 @@ public class ApplicationInfo {
     private RemoteSource remoteSource;
 
     private List<SyncInfo> ftpSyncList;
+
+    private List<EmailInfo> emailList;
+
+    public List<EmailInfo> getEmailList() {
+        return emailList;
+    }
+
+    public void setEmailList(List<EmailInfo> emailList) {
+        this.emailList = emailList;
+    }
 
     public List<FTPSource> getFtpSourceList() {
         return ftpSourceList;

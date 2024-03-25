@@ -1,5 +1,7 @@
 package com.hthk.fintech.model.net.network;
 
+import java.util.List;
+
 /**
  * @Author: Rock CHEN
  * @Date: 2024/3/21 13:38
@@ -15,6 +17,26 @@ public class SyncInfo {
     private Boolean sendEmail;
 
     private String subject;
+
+    private List<String> emailReceiveList;
+
+    private List<String> emailCCList;
+
+    public List<String> getEmailReceiveList() {
+        return emailReceiveList;
+    }
+
+    public void setEmailReceiveList(List<String> emailReceiveList) {
+        this.emailReceiveList = emailReceiveList;
+    }
+
+    public List<String> getEmailCCList() {
+        return emailCCList;
+    }
+
+    public void setEmailCCList(List<String> emailCCList) {
+        this.emailCCList = emailCCList;
+    }
 
     public Boolean getSendEmail() {
         return sendEmail;
