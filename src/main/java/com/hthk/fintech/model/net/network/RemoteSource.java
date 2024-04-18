@@ -1,5 +1,6 @@
 package com.hthk.fintech.model.net.network;
 
+import com.hthk.fintech.model.net.ftp.FTPSourceFile;
 import com.hthk.fintech.model.net.ftp.FTPSourceFolder;
 
 import java.util.List;
@@ -11,6 +12,16 @@ import java.util.List;
 public class RemoteSource {
 
     private List<FTPSourceFolder> ftpFolderList;
+
+    private List<FTPSourceFile> ftpFileList;
+
+    public List<FTPSourceFile> getFtpFileList() {
+        return ftpFileList;
+    }
+
+    public void setFtpFileList(List<FTPSourceFile> ftpFileList) {
+        this.ftpFileList = ftpFileList;
+    }
 
     public List<FTPSourceFolder> getFtpFolderList() {
         return ftpFolderList;
