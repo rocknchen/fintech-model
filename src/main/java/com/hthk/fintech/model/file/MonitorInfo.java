@@ -1,5 +1,7 @@
 package com.hthk.fintech.model.file;
 
+import java.util.List;
+
 /**
  * @Author: Rock CHEN
  * @Date: 2024/4/18 15:29
@@ -11,6 +13,18 @@ public class MonitorInfo {
     private AccessItemTypeEnum type;
 
     private String referenceId;
+
+    private String triggerExpression;
+
+//    private List<?> handlerList;
+
+    public String getTriggerExpression() {
+        return triggerExpression;
+    }
+
+    public void setTriggerExpression(String triggerExpression) {
+        this.triggerExpression = triggerExpression;
+    }
 
     public String getId() {
         return id;
