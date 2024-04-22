@@ -16,7 +16,27 @@ public class MonitorInfo {
 
     private String triggerExpression;
 
-//    private List<?> handlerList;
+    private List<String> receiveList;
+
+    private List<String> ccList;
+
+    //    private List<?> handlerList;
+
+    public List<String> getReceiveList() {
+        return receiveList;
+    }
+
+    public void setReceiveList(List<String> receiveList) {
+        this.receiveList = receiveList;
+    }
+
+    public List<String> getCcList() {
+        return ccList;
+    }
+
+    public void setCcList(List<String> ccList) {
+        this.ccList = ccList;
+    }
 
     public String getTriggerExpression() {
         return triggerExpression;
