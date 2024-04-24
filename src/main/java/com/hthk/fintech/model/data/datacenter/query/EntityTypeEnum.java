@@ -10,6 +10,6 @@ public enum EntityTypeEnum {
 
     EOD_QUOTE,
 
-    POSITION, STATIC_DATA, USER;
+    POSITION, STATIC_DATA, USER, USER_GROUP;
 
 }
